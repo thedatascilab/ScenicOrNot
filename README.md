@@ -12,7 +12,7 @@ The lovely people at [Geograph](http://www.geograph.org.uk/).
 
 ## Why did you build it?
 
-Originally, mySociety wanted to gather a freely available nationwide dataset of scenicness, to use for [mapumental](https://mapumental.com/). Now, the [Data Science Lab](http://www.datasciencelab.co.uk/) at [Warwick Business School](http://www.wbs.ac.uk/) have taken over Scenic-or-Not in order to research how scenicness impacts on human wellbeing.
+Originally, [mySociety](http://www.mysociety.org/) wanted to gather a freely available nationwide dataset of scenicness, to use for [mapumental](https://mapumental.com/). Now, the [Data Science Lab](http://www.datasciencelab.co.uk/) at [Warwick Business School](http://www.wbs.ac.uk/) have taken over Scenic-or-Not in order to research how scenicness impacts on human wellbeing.
 
 ## How can I find out more about this scenicness research?
 
