@@ -2,7 +2,7 @@
 
 Play the game at http://scenicornot.datasciencelab.co.uk/
 
-## What is the Scenic-or-Not site?
+## What is Scenic-or-Not?
 
 It’s a game — pit your aesthetic judgements against other users, and discover the lovely and not so lovely corners of Great Britain.
 
