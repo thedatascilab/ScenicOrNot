@@ -18,7 +18,7 @@ Originally, [mySociety](http://www.mysociety.org/) wanted to gather a freely ava
 
 Here are the latest papers using the scenicness data:
 
-Seresinhe, C. I., Preis, T., Mackerron, G. & Moat, H. S. (2019). Happiness is greater in more scenic locations. _Scientific Reports, 5_, 4498.  
+Seresinhe, C. I., Preis, T., Mackerron, G. & Moat, H. S. (2019). Happiness is greater in more scenic locations. _Scientific Reports, 9_, 4498.  
 https://www.nature.com/articles/s41598-019-40854-6
 
 Seresinhe, C. I., Moat, H. S., & Preis, T. (2018). Quantifying scenic areas using crowdsourced data. _Environment and Planning B: Urban Analytics and City Science, 45_, 567-582.  
