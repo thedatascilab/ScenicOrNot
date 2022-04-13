@@ -1,9 +1,0 @@
-# crontab.ugly:
-# Timed tasks for scenic, template file.
-#
-# Copyright (c) 2009 UK Citizens Online Democracy. All rights reserved.
-# Email: matthew@mysociety.org. WWW: http://www.mysociety.org/
-
-# Once a week, update TSV file
-0 4 * * 0 !!(*= $user *)!! /data/vhost/!!(*= $vhost *)!!/scenicornot/bin/generate-tsv.php
-
