@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Set up the application for the first time after cloning, or set it back to the
+# initial unused state.
+
+set -e
+
+# Enable the running of this script from any subdirectory without moving to root
+cd "$(dirname "$0")/../.."
+
+echo "==> Tearing down any previous application state..."
+for file in docker-compose.yml docker-compose.test.yml; do
+  docker-compose -f $file down --rmi local --volumes --remove-orphans
+done
+
+script/docker/bootstrap --no-docker-cache

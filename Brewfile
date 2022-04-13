@@ -1,0 +1,5 @@
+brew "nodenv"
+brew "postgresql" unless system "which -s psql"
+brew "rbenv"
+brew "shellcheck"
+brew "yarn"
