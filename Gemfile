@@ -49,6 +49,7 @@ group :test do
   gem "database_cleaner"
   gem "launchy"
   gem "selenium-webdriver"
+  gem "shoulda-matchers"
   gem "simplecov"
   gem "climate_control"
 end
