@@ -26,7 +26,7 @@ CSV.foreach(places_filename, headers: true, encoding: "BOM|UTF-8") do |row|
     gridsquare: row["gridsquare"],
     license_uri: row["license_uri"],
     format: row["format"],
-    votes: row["votes"],
+    vote_count: row["votes"],
     random: row["random"],
     width: row["width"],
     height: row["height"],

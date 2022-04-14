@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_14_105450) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_14_123141) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -27,7 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_14_105450) do
     t.text "gridsquare"
     t.string "license_uri"
     t.string "format"
-    t.integer "votes"
+    t.integer "vote_count"
     t.float "random"
     t.integer "width"
     t.integer "height"

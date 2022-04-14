@@ -18,7 +18,7 @@ FactoryBot.define do
     }
     license_uri { "http://creativecommons.org/licenses/by-sa/2.0/" }
     format { "image/jpeg" }
-    votes { rand(0..100) }
+    vote_count { rand(0..100) }
     random { rand(0.0..1.0) }
     width { 640 }
     height { 480 }
