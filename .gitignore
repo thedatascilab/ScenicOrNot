@@ -62,6 +62,7 @@
 *.tsv*
 *.xlr*
 *.xls*
+!/db/data/**/*.csv
 ### Terraform
 .terraformrc*
 terraform.rc*
