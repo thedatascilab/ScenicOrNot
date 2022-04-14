@@ -24,5 +24,6 @@
 *.sh
 *.txt
 *.gz
+*.csv
 /public/assets/*
 /coverage
