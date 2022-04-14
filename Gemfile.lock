@@ -380,6 +380,7 @@ DEPENDENCIES
   spring
   spring-commands-rspec
   spring-watcher-listen (~> 2.0.0)
+  sprockets-rails
   standard
   turbolinks (~> 5)
   tzinfo-data
@@ -390,4 +391,4 @@ RUBY VERSION
    ruby 2.7.4p191
 
 BUNDLED WITH
-   2.3.5
+   2.3.11
