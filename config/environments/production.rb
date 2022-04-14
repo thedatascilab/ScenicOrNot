@@ -100,7 +100,6 @@ Rails.application.configure do
     config.hosts = hosts.compact
   end
 
-
   # Rails logging
   config.lograge.enabled = true
 end
