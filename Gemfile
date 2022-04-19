@@ -55,4 +55,3 @@ group :test do
   gem "simplecov"
   gem "climate_control"
 end
-
