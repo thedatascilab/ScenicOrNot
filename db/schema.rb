@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_14_070647) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_14_131424) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -27,7 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_14_070647) do
     t.text "gridsquare"
     t.string "license_uri"
     t.string "format"
-    t.integer "votes"
+    t.integer "vote_count"
     t.float "random"
     t.integer "width"
     t.integer "height"
@@ -36,6 +36,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_14_070647) do
     t.string "geograph_image_uri"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "votes", force: :cascade do |t|
+    t.bigint "place_id"
+    t.integer "rating"
+    t.uuid "uuid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["place_id", "uuid"], name: "index_votes_on_place_id_and_uuid", unique: true
+    t.index ["place_id"], name: "index_votes_on_place_id"
   end
 
 end
