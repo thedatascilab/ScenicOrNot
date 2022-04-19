@@ -7,6 +7,7 @@ ruby "2.7.4"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap", ">= 4.3.1"
 gem "coffee-rails", "~> 5.0"
+gem "cssbundling-rails", "~> 1.1"
 gem "high_voltage"
 gem "jbuilder", "~> 2.11"
 gem "jquery-rails"
@@ -54,3 +55,4 @@ group :test do
   gem "simplecov"
   gem "climate_control"
 end
+
