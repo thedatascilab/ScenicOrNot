@@ -79,6 +79,7 @@ COPY --from=dependencies ${DEPS_HOME}/node_modules ${APP_HOME}/node_modules
 RUN mkdir -p ${APP_HOME}/log
 RUN mkdir -p ${APP_HOME}/tmp
 
+COPY rollup.config.js ${APP_HOME}/rollup.config.js
 COPY config.ru ${APP_HOME}/config.ru
 COPY Rakefile ${APP_HOME}/Rakefile
 COPY script ${APP_HOME}/script
