@@ -28,3 +28,4 @@
 *.map
 /public/assets/*
 /coverage
+.DS_Store
