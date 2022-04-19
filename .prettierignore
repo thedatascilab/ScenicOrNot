@@ -25,5 +25,6 @@
 *.txt
 *.gz
 *.csv
+*.map
 /public/assets/*
 /coverage
