@@ -3,3 +3,4 @@
 /vendor/
 /public/assets
 /coverage
+/rollup.config.js

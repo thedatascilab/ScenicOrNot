@@ -7,6 +7,10 @@ set -e
 
 TEST_FILES=$1
 
+echo  "==> Building assets..."
+yarn build
+yarn build:css
+
 if [ -n "$TEST_FILES" ]; then
   echo "==> Running the tests matching '$TEST_FILES'..."
   bundle exec rspec "$TEST_FILES"

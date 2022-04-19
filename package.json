@@ -5,9 +5,15 @@
     "lint:format": "prettier --check '**/*'",
     "lint:format:fix": "prettier --write '**/*'",
     "lint:js": "eslint .",
-    "lint:js:fix": "yarn run lint:js --fix"
+    "lint:js:fix": "yarn run lint:js --fix",
+    "build": "rollup -c rollup.config.js",
+    "build:css": "sass ./app/assets/stylesheets/application.sass.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@rollup/plugin-node-resolve": "^13.2.1",
+    "rollup": "^2.70.2",
+    "sass": "^1.50.1"
+  },
   "devDependencies": {
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",

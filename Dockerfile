@@ -79,6 +79,7 @@ COPY --from=dependencies ${DEPS_HOME}/node_modules ${APP_HOME}/node_modules
 RUN mkdir -p ${APP_HOME}/log
 RUN mkdir -p ${APP_HOME}/tmp
 
+COPY rollup.config.js ${APP_HOME}/rollup.config.js
 COPY config.ru ${APP_HOME}/config.ru
 COPY Rakefile ${APP_HOME}/Rakefile
 COPY script ${APP_HOME}/script
@@ -117,7 +118,12 @@ ENTRYPOINT ["/docker-entrypoint.sh"]
 
 EXPOSE 3000
 
-CMD ["bundle", "exec", "rails", "server"]
+CMD \
+  if [ ${RAILS_ENV} = "production" ]; then \
+  bundle exec rails server \
+  else \
+  bin/dev \
+  fi
 
 # ------------------------------------------------------------------------------
 # Test
