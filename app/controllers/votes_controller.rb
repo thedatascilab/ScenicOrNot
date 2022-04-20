@@ -2,7 +2,9 @@ class VotesController < ApplicationController
   def create
     vote = Vote.new(vote_params.merge(place_id: params[:place_id]))
 
-    unless vote.save
+    if vote.save
+      flash[:notice] = "You've just rated: #{vote.place.title} Your rating: #{vote.rating}"
+    else
       flash.now[:error] = t("votes.duplicate")
     end
 

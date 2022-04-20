@@ -3,5 +3,6 @@ class PlacesController < ActionController::Base
 
   def show
     @place = Place.order(Arel.sql("RANDOM()")).first
+    @vote = @place.votes.new
   end
 end

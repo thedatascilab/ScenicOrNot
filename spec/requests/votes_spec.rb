@@ -1,7 +1,8 @@
 RSpec.describe "Voting", type: :request do
   it "redirects to the index page when a vote is successful" do
     uuid = SecureRandom.uuid
-    place_stub = double(:place, save: true)
+    place_stub = double(:place, title: "Place title")
+    vote_stub = double(:vote, save: true, place: place_stub, rating: "4")
 
     expect(Vote).to receive(:new).with(
       ActionController::Parameters.new({
@@ -9,7 +10,7 @@ RSpec.describe "Voting", type: :request do
         uuid: uuid,
         place_id: "123"
       }).permit!
-    ).and_return(place_stub)
+    ).and_return(vote_stub)
 
     post("/places/123/votes", params: {vote: {rating: 4, uuid: uuid}})
 
@@ -20,7 +21,7 @@ RSpec.describe "Voting", type: :request do
 
   it "flashes an error message when the vote is unsuccessful" do
     uuid = SecureRandom.uuid
-    place_stub = double(:place, save: false)
+    vote_stub = double(:vote, save: false)
 
     expect(Vote).to receive(:new).with(
       ActionController::Parameters.new({
@@ -28,7 +29,7 @@ RSpec.describe "Voting", type: :request do
         uuid: uuid,
         place_id: "123"
       }).permit!
-    ).and_return(place_stub)
+    ).and_return(vote_stub)
 
     post("/places/123/votes", params: {vote: {rating: 4, uuid: uuid}})
 
