@@ -1,7 +1,7 @@
 class PlacesController < ActionController::Base
   layout "application"
 
-  def show
+  def vote
     @place = Place.not_rated_by(uuid).random.first || Place.random.first
     @vote = @place.votes.new(uuid: uuid)
   end
