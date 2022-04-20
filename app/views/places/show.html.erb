@@ -1,3 +1,14 @@
+<div id="rate">
+  <div>
+    <% (1..10).to_a.each do |i| %>
+      <%= form_for([@place, @vote]) do |f| %>
+        <%= f.hidden_field "rating", value: i.to_s %>
+        <%= f.submit i.to_s %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
 <div id="place">
   <picture>
     <source src="<%= @place.image_uri %>">
