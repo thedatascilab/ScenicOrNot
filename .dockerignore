@@ -59,6 +59,7 @@
 **/*.ods*
 **/*.ots*
 **/*.tsv*
+!/db/data/production/local_authorities.tsv
 **/*.xlr*
 **/*.xls*
 ### Terraform
