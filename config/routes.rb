@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     resources :votes, only: [:create]
   end
 
+  get "faq" => "faq#show"
+
   # If the CANONICAL_HOSTNAME env var is present, and the request doesn't come from that
   # hostname, redirect us to the canonical hostname with the path and query string present
   if ENV["CANONICAL_HOSTNAME"].present?
