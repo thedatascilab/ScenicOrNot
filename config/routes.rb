@@ -3,9 +3,10 @@
 Rails.application.routes.draw do
   get "health_check" => "application#health_check"
 
-  root to: "places#show"
+  root to: "places#vote"
 
-  resources :places, only: [:show] do
+  resources :places do
+    get "vote", to: "places#vote"
     resources :votes, only: [:create]
   end
 
