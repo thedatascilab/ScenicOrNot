@@ -3,7 +3,7 @@ class VotesController < ApplicationController
     vote = Vote.new(vote_params.merge(place_id: params[:place_id], uuid: uuid))
 
     if vote.save
-      flash[:notice] = "You've just rated: #{vote.place.title} Your rating: #{vote.rating}"
+      session[:just_rated_place_id] = vote.place_id
     else
       flash[:error] = t("votes.duplicate")
     end
