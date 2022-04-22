@@ -6,6 +6,10 @@ class PlacesController < ActionController::Base
     @vote = @place.votes.new(uuid: uuid)
   end
 
+  def leaderboard
+    @leaderboard = LeaderboardPresenter.new
+  end
+
   private
 
   def uuid
