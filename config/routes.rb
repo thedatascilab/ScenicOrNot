@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   end
 
   get "faq" => "faq#show"
+  get "leaderboard" => "places#leaderboard"
 
   # If the CANONICAL_HOSTNAME env var is present, and the request doesn't come from that
   # hostname, redirect us to the canonical hostname with the path and query string present

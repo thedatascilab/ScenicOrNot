@@ -29,4 +29,12 @@ RSpec.describe Place, type: :model do
       ])
     end
   end
+
+  describe "#map_link" do
+    it "generates an OpenStreetMap link from the latitude and longitude" do
+      place = build(:place)
+
+      expect(place.map_link).to eql("https://www.openstreetmap.org/?mlat=#{place.lat}&mlon=#{place.lon}")
+    end
+  end
 end
