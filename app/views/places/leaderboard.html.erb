@@ -11,7 +11,7 @@
     <ol>
       <% @leaderboard.top_five.each do |rated_place| %>
         <li>
-          <%= render "place_with_rating", place: rated_place %>
+          <%= render "place_with_rating", place: rated_place, thumbnail_is_link: true %>
         </li>
       <% end %>
     </ol>
@@ -23,7 +23,7 @@
     <ol>
       <% @leaderboard.bottom_five.each do |rated_place| %>
         <li>
-          <%= render "place_with_rating", place: rated_place %>
+          <%= render "place_with_rating", place: rated_place, thumbnail_is_link: true %>
         </li>
       <% end %>
     </ol>
