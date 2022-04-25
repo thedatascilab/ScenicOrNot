@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   end
 
   get "faq" => "faq#show"
+  get "cookies" => "cookies#show"
   get "leaderboard" => "places#leaderboard"
 
   resources :data_downloads, only: [:index]
