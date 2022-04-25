@@ -1,0 +1,6 @@
+<dl>
+  <% @local_authorities.each do |council| %>
+    <dt><%= council.name %></dt>
+    <dd><%= link_to "Download the data for #{council.name}", council.data_url %></dd>
+  <% end %>
+</dl>
