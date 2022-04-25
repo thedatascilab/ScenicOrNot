@@ -6,8 +6,7 @@ RSpec.describe "Voting", type: :request do
   end
 
   it "redirects to the index page when a vote is successful" do
-    place_stub = double(:place, title: "Place title")
-    vote_stub = double(:vote, save: true, place: place_stub, rating: "4")
+    vote_stub = double(:vote, save: true, place_id: 123, rating: "4")
 
     expect(Vote).to receive(:new).with(
       ActionController::Parameters.new({
