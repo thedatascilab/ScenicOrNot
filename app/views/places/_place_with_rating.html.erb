@@ -3,7 +3,9 @@
     <strong><%= place.title %></strong>
     <span><%= link_to "(map)", place.map_link %></span>
   </div>
-  <img src="<%= place.image_uri %>" width="90px" alt="<%= place.title %>">
+    <a href="<%= place_path(place.id) %>">
+      <img src="<%= place.image_uri %>" width="90px" alt="<%= place.title %>">
+    </a>
   <p>Rating: <strong><%= place.score %></strong> (from <%= place.vote_count %> votes)</p>
 </div>
 

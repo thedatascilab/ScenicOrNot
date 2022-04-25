@@ -1,0 +1,12 @@
+<div id="place">
+  <picture>
+    <source src="<%= place.image_uri %>">
+    <img src="<%= place.image_uri %>" alt="<%= place.title %>" />
+  </picture>
+</div>
+
+<div id="licence">
+  <a href="http://www.geograph.org.uk/photo/<%= place.geograph_id %>">Photo</a> by
+  <a href="<%= place.creator_uri %>"><%= place.creator %></a>
+  (<a href="<%= place.license_uri %>">Licence</a>)
+</div>

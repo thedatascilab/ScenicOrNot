@@ -11,6 +11,10 @@ class PlacesController < ActionController::Base
     @leaderboard = LeaderboardPresenter.new
   end
 
+  def show
+    @place = PlacePresenter.new(Place.find(params[:id]))
+  end
+
   private
 
   def uuid
