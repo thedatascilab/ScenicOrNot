@@ -1,6 +1,39 @@
-// Entry point for your Sass build
+$font: Georgia, Arial, sans-serif;
+$background: #60ab9f;
+$link-colour: #554841;
+$link-hover-colour: #9d4841;
+
+body {
+   font-family: $font;
+   font-size: 1em;
+   color: #fff;
+   margin: 0;
+   padding: 0;
+   background: $background url("/assets/page-tile.jpg") repeat-x;
+}
+
 #rate form {
-  display: inline-block;
+   display: inline-block;
+ }
+
+img {
+   border: 0;
+}
+
+ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+a:link,
+a:visited {
+   text-decoration: underline;
+   color: $link-colour;
+}
+
+a:hover {
+   color: $link-hover-colour;
 }
 
 .hidden {
