@@ -3,6 +3,6 @@ module PlaceHelper
     thumbnail = "<img src='#{place.image_uri}' width='90px' alt='#{place.title}' />".html_safe
     return thumbnail unless thumbnail_is_link
 
-    link_to(thumbnail, place_path(place.id))
+    link_to(thumbnail, place_path(place.to_param))
   end
 end
