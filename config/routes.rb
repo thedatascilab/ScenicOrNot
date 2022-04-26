@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   root to: "places#vote"
 
-  resources :places do
+  resources :places, only: [:show] do
     get "vote", to: "places#vote"
     resources :votes, only: [:create]
   end

@@ -30,5 +30,11 @@ RSpec.describe "The leaderboard" do
       expect(page).to have_content("Saruman's Tower")
       expect(page).to have_content("Rating: 1 (from 3 votes)")
     end
+
+    # And each top 5 place is a link to a detailed view of that place
+    click_on "The Shire"
+    expect(page).to have_content("The Shire (map)")
+    expect(page).to have_content("Photo by")
+    expect(page).to have_content("Rating: 10 (from 3 votes)")
   end
 end

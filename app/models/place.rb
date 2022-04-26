@@ -8,4 +8,8 @@ class Place < ApplicationRecord
   def map_link
     "https://www.openstreetmap.org/?mlat=#{lat}&mlon=#{lon}"
   end
+
+  def to_param
+    "#{id}-#{title.parameterize}"
+  end
 end
