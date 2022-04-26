@@ -2,7 +2,7 @@ class PlacesController < ActionController::Base
   layout "application"
 
   def vote
-    @place = Place.not_rated_by(uuid).random.first || Place.random.first
+    @place = PlacePicker.new(uuid).place
     @vote = @place.votes.new(uuid: uuid)
     @last_rated_place = PlacePresenter.new(just_rated_place) if just_rated_place
   end
