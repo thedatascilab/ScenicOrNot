@@ -105,13 +105,13 @@ a:hover {
   #sidebar {
     position: relative;
     color: $link-colour;
-    background:  url("/assets/rated-board-tile") repeat-y;
+    background: url("/assets/rated-board-tile") repeat-y;
     background-size: contain;
     margin: 40px 0 40px 0;
     padding: 0px 20px 10px 20px;
 
     &:before {
-      content:"";
+      content: "";
       background: url("/assets/rated-board-top.png") top no-repeat;
       background-size: contain;
       height: 40px;
@@ -124,7 +124,7 @@ a:hover {
     }
 
     &:after {
-      content:"";
+      content: "";
       background: url("/assets/rated-board-bottom.png") bottom no-repeat;
       background-size: contain;
       height: 40px;
@@ -140,6 +140,43 @@ a:hover {
       width: 100%;
       margin: 10px 0;
       border: 2px solid white;
+    }
+  }
+
+  #rate {
+    background: url("/assets/rating-bg.png") top;
+    background-size: contain;
+    width: 507px;
+    height: 65px;
+    margin: 0 0 0 64px;
+    padding: 60px 0 0 0;
+
+    #inner {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      img {
+        width: 63px;
+        height: 52px;
+        display: inline-block;
+      }
+
+      input {
+        border: none;
+        background: transparent;
+        font: 1.4em $font;
+        color: #fff;
+        margin: 10px 0;
+        padding: 10px 7px;
+
+        &:hover {
+          text-shadow: 1px 1px #000;
+          cursor: pointer;
+          background: url("/assets/hover-top.svg") top center no-repeat,
+            url("/assets/hover-bottom.svg") bottom center no-repeat;
+        }
+      }
     }
   }
 }
