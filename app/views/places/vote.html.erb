@@ -1,11 +1,13 @@
-<aside>
-  <% if @last_rated_place %>
-    You've just rated:
-    <%= render "place_with_rating", place: @last_rated_place, thumbnail_is_link: false %>
-  <% else %>
-    ScenicOrNot helps you to explore every corner of England, Scotland and Wales, all the while comparing your aesthetic judgements with fellow players.
-  <% end %>
-</aside>
+<% content_for :sidebar do %>
+  <aside>
+    <% if @last_rated_place %>
+      You've just rated:
+      <%= render "place_with_rating", place: @last_rated_place, thumbnail_is_link: false %>
+    <% else %>
+      ScenicOrNot helps you to explore every corner of England, Scotland and Wales, all the while comparing your aesthetic judgements with fellow players.
+    <% end %>
+  </aside>
+<% end %>
 
 <div id="rate">
   <div>

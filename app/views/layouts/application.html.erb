@@ -13,14 +13,17 @@
     <%= stylesheet_link_tag "application" %>
   </head>
   <body>
-    <%= render "layouts/cookie_banner" %>
-    <header>
-      <%= render "layouts/navigation" %>
-    </header>
-    <main role="main">
-      <%= render "layouts/messages" %>
-      <%= yield %>
-    </main>
+    <div id="container">
+      <%= render "layouts/cookie_banner" %>
+      <section id="header">
+        <%= render "layouts/navigation" %>
+        <%= yield :sidebar %>
+      </section>
+      <main role="main">
+        <%= render "layouts/messages" %>
+        <%= yield %>
+      </main>
+    </div>
     <footer>
       <p>A mini-project originally created for <a href="http://www.mysociety.org">mySociety</a>. Now hosted by the <a href="http://datasciencelab.co.uk/"> Data Science Lab</a>, <a href="http://www.wbs.ac.uk/">Warwick Business School.</a></p>
       <ul>
