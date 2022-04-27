@@ -3,12 +3,16 @@ class LeaderboardPresenter
 
   TOTAL_UK_LAND_AREA_IN_SQ_KM = 241930
 
+  def initialize(leaderboard: Leaderboard.new)
+    @leaderboard = leaderboard
+  end
+
   def top_five
-    Vote.most_scenic_places.map { |result| PlaceWithRating.new(result) }
+    @leaderboard.most_scenic_places.map { |result| PlaceWithRating.new(result) }
   end
 
   def bottom_five
-    Vote.least_scenic_places.map { |result| PlaceWithRating.new(result) }
+    @leaderboard.least_scenic_places.map { |result| PlaceWithRating.new(result) }
   end
 
   def percentage_coverage
