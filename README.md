@@ -64,8 +64,7 @@ people, to help limit abuse, or the impact of people with terrible taste.
 
 ## Who built it?
 
-Scenic-or-Not was originally built by
-[dxw](https://www.dxw.com/) for
+Scenic-or-Not was originally built by [dxw](https://www.dxw.com/) for
 [mySociety](http://www.mysociety.org/). It is now hosted by the
 [Data Science Lab](http://datasciencelab.co.uk/) at
 [Warwick Business School](http://www.wbs.ac.uk/).
