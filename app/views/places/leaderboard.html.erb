@@ -1,31 +1,36 @@
-<div>
+<div id="content">
   <h2>Leaderboard</h2>
 
   <p>
     This page shows the current prettiest and ugliest places, according to your votes. It only uses the votes we've gathered so far, and that's only <%= @leaderboard.percentage_coverage %>% of the country - if you think that they're wrong, get voting!
   </p>
 
-  <div id="most-scenic">
-    <h3>Top 5</h3>
+  <div id="leaderboard">
+    <div id="most-scenic">
+      <h3>Top 5</h3>
+      <div class="inner">
+        <ol>
+          <% @leaderboard.top_five.each do |rated_place| %>
+            <li>
+              <%= render "place_with_rating", place: rated_place, thumbnail_is_link: true %>
+            </li>
+          <% end %>
+        </ol>
+      </div>
+    </div>
 
-    <ol>
-      <% @leaderboard.top_five.each do |rated_place| %>
-        <li>
-          <%= render "place_with_rating", place: rated_place, thumbnail_is_link: true %>
-        </li>
-      <% end %>
-    </ol>
+    <div id="least-scenic">
+      <h3>Bottom 5</h3>
+      <div class="inner">
+        <ol>
+          <% @leaderboard.bottom_five.each do |rated_place| %>
+            <li>
+              <%= render "place_with_rating", place: rated_place, thumbnail_is_link: true %>
+            </li>
+          <% end %>
+        </ol>
+      </div>
+    </div>
   </div>
 
-  <div id="least-scenic">
-    <h3>Bottom 5</h3>
-
-    <ol>
-      <% @leaderboard.bottom_five.each do |rated_place| %>
-        <li>
-          <%= render "place_with_rating", place: rated_place, thumbnail_is_link: true %>
-        </li>
-      <% end %>
-    </ol>
-  </div>
 </div>
