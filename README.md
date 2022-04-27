@@ -65,7 +65,7 @@ people, to help limit abuse, or the impact of people with terrible taste.
 ## Who built it?
 
 Scenic-or-Not was originally built by
-[The Dextrous Web (now Dextrous Digital)](https://www.dxw.com/) for
+[dxw](https://www.dxw.com/) for
 [mySociety](http://www.mysociety.org/). It is now hosted by the
 [Data Science Lab](http://datasciencelab.co.uk/) at
 [Warwick Business School](http://www.wbs.ac.uk/).
