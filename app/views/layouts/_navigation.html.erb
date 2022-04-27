@@ -1,24 +1,36 @@
-<nav>
-  <ul class="nav">
-    <li id="logo">
-      <a href="/">
-        <%= image_tag "logo.png", alt: "ScenicOrNot", width: "100%" %>
-      </a>
-    </li>
-    <li id="home">
-      <a href="/">
-        Home
-      </a>
-    </li>
-    <li id="faq">
-      <a href="/faq">
-        FAQ
-      </a>
-    </li>
-    <li id="leaderboard">
-      <a href="/leaderboard">
-        Leaderboard
-      </a>
-    </li>
-  </ul>
+<nav class="navbar navbar-dark">
+  <div class="container">
+    <a class="navbar-brand hide-desktop" href="/">
+      <%= image_tag "mobile-brand", width: 30, height: 30, class: "d-inline-block align-text-top" %>
+      ScenicOrNot
+    </a>
+    <button class="navbar-toggler hide-desktop" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navigation">
+      <ul class="nav">
+        <li id="logo" class="hide-mobile">
+          <a href="/">
+            <%= image_tag "logo.png", alt: "ScenicOrNot", width: "100%" %>
+          </a>
+        </li>
+        <li id="home" class="nav-item">
+          <a href="/" class="nav-link">
+            Home
+          </a>
+        </li>
+        <li id="faq" class="nav-item">
+          <a href="/faq" class="nav-link">
+            FAQ
+          </a>
+        </li>
+        <li id="leaderboard" class="nav-item">
+          <a href="/leaderboard" class="nav-link">
+            Leaderboard
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>

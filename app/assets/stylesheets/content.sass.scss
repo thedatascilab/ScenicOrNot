@@ -1,48 +1,50 @@
-main {
-  #content {
-    color: $link-colour;
-    background-color: #c7b199;
-    padding: 0 20px;
-    margin: 75px auto;
-    position: relative;
-    border-left: 2px solid $link-colour;
+@media (min-width: 950px) {
+  main {
+    #content {
+      color: $link-colour;
+      background-color: #c7b199;
+      padding: 0 20px;
+      margin: 75px auto;
+      position: relative;
+      border-left: 2px solid $link-colour;
 
-    &::before {
-      content: "";
-      background: url("/assets/generic-top.png") top no-repeat;
-      background-size: contain;
-      height: 65px;
-      width: 507px;
-      display: block;
-      position: absolute;
-      top: -65px;
-      left: 0;
-      z-index: 100;
-    }
+      &::before {
+        content: "";
+        background: url("/assets/generic-top.png") top no-repeat;
+        background-size: contain;
+        height: 65px;
+        width: 507px;
+        display: block;
+        position: absolute;
+        top: -65px;
+        left: 0;
+        z-index: 100;
+      }
 
-    &::after {
-      content: "";
-      background: url("/assets/generic-bottom.png") top no-repeat;
-      background-size: contain;
-      height: 22px;
-      width: 507px;
-      display: block;
-      position: absolute;
-      bottom: -22px;
-      left: -2px;
-      z-index: 100;
-    }
+      &::after {
+        content: "";
+        background: url("/assets/generic-bottom.png") top no-repeat;
+        background-size: contain;
+        height: 22px;
+        width: 507px;
+        display: block;
+        position: absolute;
+        bottom: -22px;
+        left: -2px;
+        z-index: 100;
+      }
 
-    h1 {
-      font-size: 1.5em;
-      font-weight: normal;
-      margin: 0;
-    }
+      h1 {
+        font-size: 1.5em;
+        font-weight: normal;
+        margin: 0;
+      }
 
-    dl {
-      dt {
-        padding-top: 10px;
-        font-weight: bold;
+      dl {
+        dt {
+          padding-top: 10px;
+          font-weight: bold;
+        }
       }
     }
   }

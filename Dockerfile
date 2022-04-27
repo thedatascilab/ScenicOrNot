@@ -16,6 +16,8 @@ RUN \
   build-essential \
   libpq-dev
 
+RUN apt-get update && apt-get install -y yarn
+
 ENV APP_HOME /srv/app
 ENV DEPS_HOME /deps
 
@@ -28,7 +30,6 @@ ENV NODE_ENV ${RAILS_ENV:-production}
 # ------------------------------------------------------------------------------
 FROM base AS dependencies
 
-RUN apt-get update && apt-get install -y yarn
 
 WORKDIR ${DEPS_HOME}
 
@@ -94,6 +95,10 @@ COPY app ${APP_HOME}/app
 
 # Create tmp/pids
 RUN mkdir -p tmp/pids
+
+RUN yarn run build:css && \
+  yarn run build:css:mobile && \
+  yarn run build
 
 RUN \
   if [ "$RAILS_ENV" = "production" ]; then \
