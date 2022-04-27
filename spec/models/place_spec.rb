@@ -30,6 +30,23 @@ RSpec.describe Place, type: :model do
     end
   end
 
+  describe ".with_enough_votes" do
+    let(:place) { FactoryBot.create(:place) }
+    let(:options) { {min_vote_count: 3} }
+
+    before do
+      FactoryBot.create_list(:vote, 3, place: place)
+      # places without enough votes
+      FactoryBot.create(:place)
+      place_1_vote = FactoryBot.create(:place)
+      FactoryBot.create(:vote, place: place_1_vote)
+    end
+
+    it "returns the places with at least n votes" do
+      expect(Place.with_enough_votes(options)).to eql([place])
+    end
+  end
+
   describe "#map_link" do
     it "generates an OpenStreetMap link from the latitude and longitude" do
       place = build(:place)

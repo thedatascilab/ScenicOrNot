@@ -49,11 +49,13 @@ RSpec.describe LeaderboardPresenter, type: :presenter do
     end
   end
 
-  describe "percentage_coverage" do
-    it "calculates the coverage of the territory" do
-      allow(Place).to receive(:count).and_return(120000)
+  describe "percentage_rated" do
+    let(:places) { double(:places, count: 200000) }
 
-      expect(LeaderboardPresenter.new.percentage_coverage).to eql("49.6")
+    it "displays the percentage of territory with places having received at least 3 votes" do
+      allow(Place).to receive(:with_enough_votes).and_return(places)
+
+      expect(LeaderboardPresenter.new.percentage_rated).to eql("85.33%")
     end
   end
 end
