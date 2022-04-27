@@ -7,6 +7,10 @@ $link-hover-colour: #9d4841;
 @import './leaderboard.sass.scss';
 @import './show.sass.scss';
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: $font;
   font-size: 1em;
@@ -53,9 +57,15 @@ a:hover {
 }
 
 @media (min-width: 950px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
   #container {
     grid-template-columns: 196px 650px;
     background: $background url("/assets/page-bg.jpg") repeat-x;
+    flex: 1 0 auto;
   }
 
   #container {
@@ -249,5 +259,6 @@ a:hover {
     padding: 60px 0 30px 0;
     font-size: 0.8em;
     text-align: center;
+    flex-shrink: 0;
   }
 }
