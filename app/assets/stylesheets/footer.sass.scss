@@ -1,0 +1,10 @@
+@media (min-width: 950px) {
+  footer {
+    background: $footer-bg url("/assets/footer-top.png") top no-repeat;
+    background-size: contain;
+    padding: 60px 0 30px 0;
+    font-size: 0.8em;
+    text-align: center;
+    flex-shrink: 0;
+  }
+}

@@ -1,0 +1,76 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: $font;
+  font-size: 1em;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  background: $background url("/assets/page-tile.jpg") repeat-x;
+}
+
+#rate form {
+  display: inline-block;
+}
+
+img {
+  border: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a:link,
+a:visited {
+  text-decoration: underline;
+  color: $link-colour;
+}
+
+a:hover {
+  color: $link-hover-colour;
+}
+
+.hidden {
+  display: none;
+}
+
+#container {
+  width: 950px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+  color: $link-hover-colour;
+}
+
+@media (min-width: 950px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #container {
+    grid-template-columns: 196px 650px;
+    background: $background url("/assets/page-bg.jpg") repeat-x;
+    flex: 1 0 auto;
+  }
+
+  #container {
+    width: 950px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+  }
+
+  main {
+    width: 507px;
+    margin: 0 auto;
+    padding: 0;
+    z-index: 1;
+  }
+}

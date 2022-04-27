@@ -1,0 +1,42 @@
+@media (min-width: 950px) {
+  #sidebar {
+    position: relative;
+    color: $link-colour;
+    background: url("/assets/rated-board-tile") repeat-y;
+    background-size: contain;
+    margin: 40px 0 40px 0;
+    padding: 0px 20px 10px 20px;
+
+    &:before {
+      content: "";
+      background: url("/assets/rated-board-top.png") top no-repeat;
+      background-size: contain;
+      height: 40px;
+      width: 197px;
+      display: block;
+      position: absolute;
+      top: -40px;
+      left: 0;
+      z-index: 100;
+    }
+
+    &:after {
+      content: "";
+      background: url("/assets/rated-board-bottom.png") bottom no-repeat;
+      background-size: contain;
+      height: 40px;
+      width: 197px;
+      display: block;
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      z-index: 100;
+    }
+
+    img {
+      width: 100%;
+      margin: 10px 0;
+      border: 2px solid white;
+    }
+  }
+}
