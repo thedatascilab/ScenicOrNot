@@ -2,10 +2,12 @@ $font: Georgia, Arial, sans-serif;
 $background: #60ab9f;
 $link-colour: #554841;
 $link-hover-colour: #9d4841;
+$footer-bg: #a2c76c;
 
 @import './content.sass.scss';
 @import './leaderboard.sass.scss';
 @import './show.sass.scss';
+@import './cookies.sass.scss';
 
 html, body {
   height: 100%;
@@ -254,7 +256,7 @@ a:hover {
   }
 
   footer {
-    background: #a2c76c url("/assets/footer-top.png") top no-repeat;
+    background: $footer-bg url("/assets/footer-top.png") top no-repeat;
     background-size: contain;
     padding: 60px 0 30px 0;
     font-size: 0.8em;
