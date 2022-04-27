@@ -238,4 +238,12 @@ a:hover {
       text-align: center;
     }
   }
+
+  footer {
+    background: #a2c76c url("/assets/footer-top.png") top no-repeat;
+    background-size: contain;
+    padding: 60px 0 30px 0;
+    font-size: 0.8em;
+    text-align: center;
+  }
 }
