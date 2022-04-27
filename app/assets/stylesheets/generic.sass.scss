@@ -40,15 +40,15 @@ a:hover {
   display: none;
 }
 
-#container {
-  width: 950px;
-  margin: 0 auto;
-  display: grid;
-  grid-gap: 1rem;
-  color: $link-hover-colour;
-}
-
 @media (min-width: 950px) {
+  #container {
+    width: 950px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    color: $link-hover-colour;
+  }
+
   body {
     display: flex;
     flex-direction: column;

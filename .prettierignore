@@ -27,6 +27,7 @@
 *.csv
 *.tsv
 *.map
+*.svg
 /public/assets/*
 /coverage
 .DS_Store

@@ -1,3 +1,15 @@
+@media (max-width: 950px) {
+  nav {
+    li {
+      &#logo {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 950px) {
   nav {
     li {
