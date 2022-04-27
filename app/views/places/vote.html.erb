@@ -1,5 +1,5 @@
 <% content_for :sidebar do %>
-  <aside>
+  <aside id="sidebar">
     <% if @last_rated_place %>
       You've just rated:
       <%= render "place_with_rating", place: @last_rated_place, thumbnail_is_link: false %>

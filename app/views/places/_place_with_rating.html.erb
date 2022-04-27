@@ -1,9 +1,9 @@
 <div class="place">
+  <%= place_thumbnail(place, thumbnail_is_link: thumbnail_is_link) %>
   <div>
     <strong><%= place.title %></strong>
     <span><%= link_to "(map)", place.map_link %></span>
   </div>
-  <%= place_thumbnail(place, thumbnail_is_link: thumbnail_is_link) %>
   <p>Rating: <strong><%= place.score %></strong> (from <%= place.vote_count %> votes)</p>
 </div>
 
