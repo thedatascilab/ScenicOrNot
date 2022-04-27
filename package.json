@@ -7,7 +7,8 @@
     "lint:js": "eslint .",
     "lint:js:fix": "yarn run lint:js --fix",
     "build": "rollup -c rollup.config.js",
-    "build:css": "sass ./app/assets/stylesheets/application.sass.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules"
+    "build:css": "sass ./app/assets/stylesheets/application.sass.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules",
+    "build:css:mobile": "sass ./app/assets/stylesheets/mobile.sass.scss ./app/assets/builds/mobile.css --no-source-map --load-path=node_modules"
   },
   "dependencies": {
     "@babel/core": "^7.17.9",
