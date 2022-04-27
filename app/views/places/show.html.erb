@@ -1,9 +1,13 @@
-<aside>
-  <div>
-    <strong><%= @place.title %></strong>
-    <span><%= link_to "(map)", @place.map_link %></span>
-  </div>
-  <p>Rating: <strong><%= @place.score %></strong> (from <%= @place.vote_count %> votes)</p>
-</aside>
+<% content_for :sidebar do %>
+  <aside id="sidebar">
+    <div>
+      <strong><%= @place.title %></strong>
+      <span><%= link_to "(map)", @place.map_link %></span>
+    </div>
+    <p>Rating: <strong><%= @place.score %></strong> (from <%= @place.vote_count %> votes)</p>
+  </aside>
+<% end %>
 
-<%= render "place", place: @place %>
+<div id="show">
+  <%= render "place", place: @place %>
+</div>

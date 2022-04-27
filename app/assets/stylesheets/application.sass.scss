@@ -1,8 +1,15 @@
-// Entry point for your Sass build
-#rate form {
-  display: inline-block;
-}
+$font: Georgia, Arial, sans-serif;
+$background: #60ab9f;
+$link-colour: #554841;
+$link-hover-colour: #9d4841;
+$footer-bg: #a2c76c;
 
-.hidden {
-  display: none;
-}
+@import "./generic.sass.scss";
+@import "./content.sass.scss";
+@import "./rate.sass.scss";
+@import "./leaderboard.sass.scss";
+@import "./show.sass.scss";
+@import "./cookies.sass.scss";
+@import "./nav.sass.scss";
+@import "./sidebar.sass.scss";
+@import "./footer.sass.scss";

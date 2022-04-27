@@ -1,0 +1,54 @@
+@media (max-width: 950px) {
+  nav {
+    li {
+      &#logo {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 950px) {
+  nav {
+    li {
+      width: 196px;
+      margin: 0;
+      padding: 0 0 0 35px;
+
+      a:link,
+      a:visited {
+        font-size: 1.2em;
+        text-decoration: none;
+      }
+
+      &#logo {
+        padding: 0;
+        width: 197px;
+        height: 162px;
+      }
+
+      &#home {
+        padding-top: 30px;
+        height: 34px;
+        background: url("/assets/home.png") no-repeat;
+        background-size: 197px 64px;
+      }
+
+      &#faq {
+        padding-top: 30px;
+        height: 34px;
+        background: url("/assets/faq.png") no-repeat;
+        background-size: 197px 64px;
+      }
+
+      &#leaderboard {
+        padding-top: 30px;
+        height: 34px;
+        background: url("/assets/leaderboard.png") no-repeat;
+        background-size: 197px 64px;
+      }
+    }
+  }
+}
