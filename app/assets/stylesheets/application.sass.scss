@@ -4,32 +4,32 @@ $link-colour: #554841;
 $link-hover-colour: #9d4841;
 
 body {
-   font-family: $font;
-   font-size: 1em;
-   color: #fff;
-   margin: 0;
-   padding: 0;
-   background: $background url("/assets/page-tile.jpg") repeat-x;
+  font-family: $font;
+  font-size: 1em;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  background: $background url("/assets/page-tile.jpg") repeat-x;
 }
 
 #rate form {
-   display: inline-block;
- }
+  display: inline-block;
+}
 
 img {
-   border: 0;
+  border: 0;
 }
 
 ul {
-   list-style: none;
-   padding: 0;
-   margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 a:link,
 a:visited {
-   text-decoration: underline;
-   color: $link-colour;
+  text-decoration: underline;
+  color: $link-colour;
 }
 
 a:hover {
@@ -45,11 +45,60 @@ a:hover {
   margin: 0 auto;
   display: grid;
   grid-gap: 1rem;
+  color: $link-hover-colour;
 }
 
 @media (min-width: 950px) {
   #container {
     grid-template-columns: 196px 650px;
-    background: $background url('/assets/page-bg.jpg') repeat-x;
+    background: $background url("/assets/page-bg.jpg") repeat-x;
+  }
+
+  #container {
+    width: 950px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+  }
+
+  nav {
+    li {
+      width: 196px;
+      margin: 0;
+      padding: 0 0 0 35px;
+
+      a:link,
+      a:visited {
+        font-size: 1.2em;
+        text-decoration: none;
+      }
+
+      &#logo {
+        padding: 0;
+        width: 197px;
+        height: 162px;
+      }
+
+      &#home {
+        padding-top: 30px;
+        height: 34px;
+        background: url("/assets/home.png") no-repeat;
+        background-size: 197px 64px;
+      }
+
+      &#faq {
+        padding-top: 30px;
+        height: 34px;
+        background: url("/assets/faq.png") no-repeat;
+        background-size: 197px 64px;
+      }
+
+      &#leaderboard {
+        padding-top: 30px;
+        height: 34px;
+        background: url("/assets/leaderboard.png") no-repeat;
+        background-size: 197px 64px;
+      }
+    }
   }
 }
