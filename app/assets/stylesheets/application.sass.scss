@@ -3,6 +3,8 @@ $background: #60ab9f;
 $link-colour: #554841;
 $link-hover-colour: #9d4841;
 
+@import './content.sass.scss';
+
 body {
   font-family: $font;
   font-size: 1em;
