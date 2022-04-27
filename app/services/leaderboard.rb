@@ -13,6 +13,8 @@ class Leaderboard
     min_vote_count: 1
   }
 
+  TOTAL_UK_LAND_AREA_IN_SQ_KM = 234387.8
+
   def most_scenic_places
     results = ActiveRecord::Base.connection.execute(top_query)
     if results.entries.size < NUM_PLACES_IN_TOP
@@ -27,6 +29,10 @@ class Leaderboard
       results = ActiveRecord::Base.connection.execute(bottom_query(FALLBACK_OPTIONS))
     end
     results.entries
+  end
+
+  def percentage_rated
+    Place.with_enough_votes(DEFAULT_OPTIONS).count.to_f / TOTAL_UK_LAND_AREA_IN_SQ_KM * 100
   end
 
   private
