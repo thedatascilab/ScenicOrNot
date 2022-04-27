@@ -2,6 +2,7 @@ $primary: #554841;
 $secondary: #c7b199;
 
 @import "bootstrap/scss/bootstrap";
+@import "./leaderboard.sass.scss";
 
 .hide-mobile {
   display: none;

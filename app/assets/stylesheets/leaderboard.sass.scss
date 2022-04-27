@@ -62,8 +62,6 @@
   }
 
   #most-scenic {
-    grid-column: 1 / 2;
-
     h3 {
       padding-left: 40px;
       background: url("/assets/top-5.png") left no-repeat;
@@ -74,14 +72,24 @@
   }
 
   #least-scenic {
-    grid-column: 2 / 2;
-
     h3 {
       padding-left: 55px;
       background: url("/assets/bottom-5.png") bottom left no-repeat;
       height: 44px;
       display: table-cell;
       vertical-align: bottom;
+    }
+  }
+}
+
+@media (min-width: 950px) {
+  #leaderboard {
+    #most-scenic {
+      grid-column: 1 / 2;
+    }
+
+    #least-scenic {
+      grid-column: 2 / 2;
     }
   }
 }
