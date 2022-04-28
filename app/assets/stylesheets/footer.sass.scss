@@ -6,5 +6,10 @@
     font-size: 0.8em;
     text-align: center;
     flex-shrink: 0;
+
+    ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
   }
 }
