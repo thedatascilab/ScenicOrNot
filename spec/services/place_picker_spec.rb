@@ -46,5 +46,11 @@ RSpec.describe PlacePicker, type: :service do
         end
       end
     end
+
+    it "never selects a place that is not active_on_geograph" do
+      place_rated_by_user.update(active_on_geograph: false)
+
+      expect(PlacePicker.new(uuid).place).to be_nil
+    end
   end
 end
