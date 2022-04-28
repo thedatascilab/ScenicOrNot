@@ -37,6 +37,31 @@ $secondary: #c7b199;
 #rate {
   @extend .box;
   text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+
+  .range {
+    width: 100%;
+    font-size: 0.8em;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    img {
+      width: 25%;
+    }
+
+    padding:  0.4em;
+
+    .less-scenic {
+      text-align: left;
+      grid-column: 1;
+    }
+
+    .very-scenic {
+      text-align: right;
+      grid-column: 2;
+    }
+  }
 
   input {
     @extend .btn, .btn-primary, .btn-sm;
