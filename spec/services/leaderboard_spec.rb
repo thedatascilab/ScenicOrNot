@@ -21,6 +21,13 @@ RSpec.describe Leaderboard, type: :service do
           "vote_count" => 3
         ))
       end
+
+      it "does not include any inactive places" do
+        most_scenic_place.update(active_on_geograph: false)
+
+        top_five = Leaderboard.new.most_scenic_places
+        expect(top_five.collect { |r| r["place_id"] }).to_not include(most_scenic_place.id)
+      end
     end
 
     describe "least_scenic_places" do
@@ -33,6 +40,13 @@ RSpec.describe Leaderboard, type: :service do
           "score" => 1,
           "vote_count" => 3
         ))
+      end
+
+      it "does not include any inactive places" do
+        least_scenic_place.update(active_on_geograph: false)
+
+        bottom_five = Leaderboard.new.least_scenic_places
+        expect(bottom_five.collect { |r| r["place_id"] }).to_not include(least_scenic_place.id)
       end
     end
   end

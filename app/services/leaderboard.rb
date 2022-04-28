@@ -39,12 +39,16 @@ class Leaderboard
 
   def top_query(options = DEFAULT_OPTIONS)
     "SELECT place_id, count(place_id) AS vote_count, avg(rating) AS score FROM votes " \
+    "JOIN places ON votes.place_id = places.id " \
+    "WHERE places.active_on_geograph = true " \
     "GROUP BY place_id HAVING avg(rating) > #{options[:min_score]} AND count(place_id) >= #{options[:min_vote_count]} " \
     "ORDER BY score DESC, vote_count DESC LIMIT #{NUM_PLACES_IN_TOP}"
   end
 
   def bottom_query(options = DEFAULT_OPTIONS)
     "SELECT place_id, count(place_id) AS vote_count, avg(rating) AS score FROM votes " \
+    "JOIN places ON votes.place_id = places.id " \
+    "WHERE places.active_on_geograph = true " \
     "GROUP BY place_id HAVING avg(rating) <= #{options[:max_score]} AND count(place_id) >= #{options[:min_vote_count]} " \
     "ORDER BY score ASC, vote_count DESC LIMIT #{NUM_PLACES_IN_TOP}"
   end
