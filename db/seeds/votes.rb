@@ -20,4 +20,6 @@ CSV.foreach(votes_filename, headers: true, encoding: "BOM|UTF-8") do |row|
   }
 end
 
-Vote.upsert_all(rows, unique_by: :id)
+unique_rows = rows.uniq { |vote| [vote[:place_id], vote[:uuid]] }
+
+Vote.upsert_all(unique_rows, unique_by: :id)
