@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_28_132450) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_28_164508) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -43,6 +43,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_28_132450) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "active_on_geograph", default: true
+    t.index ["active_on_geograph"], name: "index_places_on_active_on_geograph"
   end
 
   create_table "votes", force: :cascade do |t|
