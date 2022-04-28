@@ -8,6 +8,18 @@ places_filename = File.join(
   "places.csv"
 )
 
+inactive_images_filename = File.join(
+  Rails.root,
+  "db",
+  "data",
+  "missing_photos.csv"
+)
+
+inactive_images = CSV.parse(
+  File.read(inactive_images_filename, encoding: "BOM|UTF-8"),
+  headers: true
+).map { |row| row["gridimage_id"] }
+
 rows = []
 
 CSV.foreach(places_filename, headers: true, encoding: "BOM|UTF-8") do |row|
@@ -35,7 +47,8 @@ CSV.foreach(places_filename, headers: true, encoding: "BOM|UTF-8") do |row|
     height: row["height"],
     aspect: row["aspect"],
     geograph_image_uri: row["image_uri"],
-    image_uri: image_uri
+    image_uri: image_uri,
+    active_on_geograph: !inactive_images.include?(geograph_id)
   }
 end
 
