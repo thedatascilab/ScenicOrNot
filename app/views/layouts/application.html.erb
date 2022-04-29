@@ -6,7 +6,7 @@
       <%= content_for?(:title) ? yield(:title) : I18n.t("app.name") %>
     </title>
     <meta content="<%= content_for?(:description) ? yield(:description) : I18n.t("app.name") %>" name="description"/>
-    <%= favicon_link_tag asset_path('favicon-32x32.png'), :rel => 'icon', :type =>  'image/png' %>
+    <%= favicon_link_tag asset_path('favicon.ico'), :rel => 'icon' %>
     <%= stylesheet_link_tag "mobile", media: 'screen and (max-width: 949px)', "data-turbolinks-track" => "reload" %>
     <%= stylesheet_link_tag "application", media: 'screen and (min-width: 950px)', "data-turbolinks-track" => "reload" %>
     <%= csrf_meta_tags %>
