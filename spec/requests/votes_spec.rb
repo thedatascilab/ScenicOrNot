@@ -23,8 +23,8 @@ RSpec.describe "Voting", type: :request do
     expect(flash[:error]).to be_nil
   end
 
-  it "flashes an error message when the vote is unsuccessful" do
-    vote_stub = double(:vote, save: false)
+  it "redirects to the index page when the vote is unsuccessful" do
+    vote_stub = double(:vote, save: false, place_id: 123)
 
     expect(Vote).to receive(:new).with(
       ActionController::Parameters.new({
@@ -36,6 +36,8 @@ RSpec.describe "Voting", type: :request do
 
     post("/places/123/votes", params: {vote: {rating: 4}})
 
-    expect(flash[:error]).to eq(I18n.t("votes.duplicate"))
+    expect(response).to redirect_to(root_path)
+
+    expect(flash[:error]).to be_nil
   end
 end
