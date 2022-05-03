@@ -4,7 +4,6 @@ places_filename = File.join(
   Rails.root,
   "db",
   "data",
-  "development",
   "places.csv"
 )
 
