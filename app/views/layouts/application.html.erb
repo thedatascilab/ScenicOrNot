@@ -6,7 +6,7 @@
       <%= content_for?(:title) ? yield(:title) : I18n.t("app.name") %>
     </title>
     <meta content="<%= content_for?(:description) ? yield(:description) : I18n.t("app.name") %>" name="description"/>
-    <%= favicon_link_tag asset_path('favicon-32x32.png'), :rel => 'icon', :type =>  'image/png' %>
+    <%= favicon_link_tag asset_path('favicon.ico'), :rel => 'icon' %>
     <%= stylesheet_link_tag "mobile", media: 'screen and (max-width: 949px)', "data-turbolinks-track" => "reload" %>
     <%= stylesheet_link_tag "application", media: 'screen and (min-width: 950px)', "data-turbolinks-track" => "reload" %>
     <%= csrf_meta_tags %>
@@ -26,7 +26,7 @@
       </main>
     </div>
     <footer>
-      <p>A mini-project originally created for <a href="http://www.mysociety.org">mySociety</a>. Now hosted by the <a href="http://datasciencelab.co.uk/"> Data Science Lab</a>, <a href="http://www.wbs.ac.uk/">Warwick Business School.</a></p>
+      <p>A mini-project originally created for <a href="http://www.mysociety.org">mySociety</a>. Now hosted by the <a href="http://datasciencelab.co.uk/"> Data Science Lab</a>, <a href="http://www.wbs.ac.uk/">Warwick Business School</a>.</p>
       <ul>
         <li>
           <a href="http://datasciencelab.co.uk/contact-us/">Contact us</a>
