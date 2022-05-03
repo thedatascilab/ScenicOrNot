@@ -8,12 +8,27 @@ places_filename = File.join(
   "places.csv"
 )
 
+inactive_images_filename = File.join(
+  Rails.root,
+  "db",
+  "data",
+  "missing_photos.csv"
+)
+
+inactive_images = CSV.parse(
+  File.read(inactive_images_filename, encoding: "BOM|UTF-8"),
+  headers: true
+).map { |row| row["gridimage_id"] }
+
+rows = []
+
 CSV.foreach(places_filename, headers: true, encoding: "BOM|UTF-8") do |row|
   geograph_id = row["geograph_uri"].split("/").last
   image_code = row["image_uri"].split("/").last
   image_uri = [ENV["S3_HOSTNAME"], image_code].join("/")
 
-  params = {
+  rows << {
+    id: row["id"],
     geograph_id: geograph_id,
     title: row["title"],
     description: row["description"],
@@ -32,8 +47,9 @@ CSV.foreach(places_filename, headers: true, encoding: "BOM|UTF-8") do |row|
     height: row["height"],
     aspect: row["aspect"],
     geograph_image_uri: row["image_uri"],
-    image_uri: image_uri
+    image_uri: image_uri,
+    active_on_geograph: !inactive_images.include?(geograph_id)
   }
-
-  Place.find_or_create_by(id: row["id"].to_i).update!(params)
 end
+
+Place.upsert_all(rows, unique_by: :id)
