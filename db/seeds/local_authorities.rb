@@ -4,7 +4,6 @@ councils_filename = File.join(
   Rails.root,
   "db",
   "data",
-  "production",
   "local_authorities.tsv"
 )
 

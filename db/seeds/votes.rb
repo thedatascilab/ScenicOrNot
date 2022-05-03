@@ -4,7 +4,6 @@ votes_filename = File.join(
   Rails.root,
   "db",
   "data",
-  "development",
   "votes.csv"
 )
 
