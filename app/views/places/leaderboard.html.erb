@@ -7,7 +7,7 @@
 
   <div id="leaderboard">
     <div id="most-scenic">
-      <h3>Top 5</h3>
+      <h2>Top 5</h2>
       <div class="inner">
         <ol>
           <% @leaderboard.top_five.each do |rated_place| %>
@@ -20,7 +20,7 @@
     </div>
 
     <div id="least-scenic">
-      <h3>Bottom 5</h3>
+      <h2>Bottom 5</h2>
       <div class="inner">
         <ol>
           <% @leaderboard.bottom_five.each do |rated_place| %>
@@ -32,5 +32,4 @@
       </div>
     </div>
   </div>
-
 </div>
