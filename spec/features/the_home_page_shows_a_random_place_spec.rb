@@ -9,5 +9,10 @@ RSpec.describe "Home page shows a random place" do
     # Then I expect to see a random place
     expect(page).to have_content("Photo by Namey Nameson")
     expect(page).to have_content("Licence")
+
+    # And I expect to see a brief explanation of what ScenicOrNot is
+    within("aside") do
+      expect(page).to have_content("ScenicOrNot helps you to explore every corner")
+    end
   end
 end

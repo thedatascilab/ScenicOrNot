@@ -18,7 +18,7 @@ RSpec.describe "Voting", type: :request do
 
     post("/places/123/votes", params: {vote: {rating: 4}})
 
-    expect(response).to redirect_to(root_path)
+    expect(response).to redirect_to(root_path(just_rated_place_id: "123"))
 
     expect(flash[:error]).to be_nil
   end
@@ -36,7 +36,7 @@ RSpec.describe "Voting", type: :request do
 
     post("/places/123/votes", params: {vote: {rating: 4}})
 
-    expect(response).to redirect_to(root_path)
+    expect(response).to redirect_to(root_path(just_rated_place_id: "123"))
 
     expect(flash[:error]).to be_nil
   end

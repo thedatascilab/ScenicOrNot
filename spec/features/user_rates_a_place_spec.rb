@@ -20,5 +20,16 @@ RSpec.describe "A user rates a place" do
     # And I am shown another place to rate
     other_place = Place.where.not(id: voted_place.id).first
     expect(page).to have_content("Photo by #{other_place.creator}")
+
+    # When I go to another page
+    visit root_path
+
+    # Then I am not shown the previously rated place
+    within("aside") do
+      expect(page).to have_content("ScenicOrNot helps you to explore every corner")
+      expect(page).to_not have_content("You've just rated:")
+      expect(page).to_not have_content(voted_place.title)
+      expect(page).to_not have_content("Rating: 5 (from 1 votes)")
+    end
   end
 end

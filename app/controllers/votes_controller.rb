@@ -5,9 +5,8 @@ class VotesController < ApplicationController
     # Under normal operating conditions the user should never be shown a place they've already rated
     # so we silently ignore duplicate votes to not disrupt the user's experience
     vote.save
-    session[:just_rated_place_id] = vote.place_id
 
-    redirect_to root_path
+    redirect_to root_path(just_rated_place_id: vote.place_id)
   end
 
   private
