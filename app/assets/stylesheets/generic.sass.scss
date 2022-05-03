@@ -9,7 +9,8 @@ body {
   color: #fff;
   margin: 0;
   padding: 0;
-  background: $background url("/assets/page-tile.jpg") repeat-x;
+  background: linear-gradient(#ded5b8, $background);
+  background-attachment: fixed;
 }
 
 #rate form {
@@ -68,7 +69,7 @@ dl.content {
 
   #container {
     grid-template-columns: 196px 650px;
-    background: $background url("/assets/page-bg.jpg") repeat-x;
+    background: transparent url("/assets/page-bg.png") repeat-x;
     flex: 1 0 auto;
   }
 
