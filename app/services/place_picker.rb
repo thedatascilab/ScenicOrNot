@@ -20,6 +20,7 @@ class PlacePicker
       .joins(:votes)
       .group("places.id")
       .having("count('votes.place_id') > :min AND count('votes.place_id') <= :max", {min: min_vote_count, max: max_vote_count})
+      .limit(10)
       .pluck(:id)
   end
 
