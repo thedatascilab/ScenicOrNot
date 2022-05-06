@@ -1,6 +1,6 @@
 @media (min-width: 950px) {
   #rate {
-    background: url("/assets/rating-bg.png") top no-repeat;
+    background: url("rating-bg.png") top no-repeat;
     background-size: contain;
     width: 100%;
     height: 95px;
@@ -31,8 +31,8 @@
         &:hover {
           text-shadow: 1px 1px #000;
           cursor: pointer;
-          background: url("/assets/hover-top.svg") top center no-repeat,
-            url("/assets/hover-bottom.svg") bottom center no-repeat;
+          background: url("hover-top.svg") top center no-repeat,
+            url("hover-bottom.svg") bottom center no-repeat;
         }
       }
     }
@@ -41,7 +41,7 @@
   #place {
     margin: 0;
     padding: 0;
-    background: url("/assets/pictureframe-bg.png") repeat-y;
+    background: url("pictureframe-bg.png") repeat-y;
     background-size: contain;
     width: 100%;
     position: relative;
@@ -51,7 +51,7 @@
 
     &:before {
       content: "";
-      background: url("/assets/pictureframe-landscape-top.png") top no-repeat;
+      background: url("pictureframe-landscape-top.png") top no-repeat;
       background-size: contain;
       height: 24px;
       width: 100%;
@@ -63,7 +63,7 @@
 
     &:after {
       content: "";
-      background: url("/assets/pictureframe-landscape-bottom.png") bottom
+      background: url("pictureframe-landscape-bottom.png") bottom
         no-repeat;
       background-size: contain;
       height: 24px;
