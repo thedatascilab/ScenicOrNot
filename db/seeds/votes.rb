@@ -7,18 +7,20 @@ votes_filename = File.join(
   "votes.csv"
 )
 
-rows = []
+SmarterCSV.process(votes_filename, chunk_size: 1000) do |chunk|
+  rows = []
 
-CSV.foreach(votes_filename, headers: true, encoding: "BOM|UTF-8") do |row|
-  rows << {
-    id: row["id"].to_i,
-    place_id: row["place"],
-    uuid: row["uuid"],
-    rating: row["rating"],
-    created_at: DateTime.parse(row["date_submitted"])
-  }
+  chunk.each do |row|
+    rows << {
+      id: row[:id].to_i,
+      place_id: row[:place],
+      uuid: row[:uuid],
+      rating: row[:rating],
+      created_at: DateTime.parse(row[:date_submitted])
+    }
+  end
+
+  unique_rows = rows.uniq { |vote| [vote[:place_id], vote[:uuid]] }
+
+  Vote.import unique_rows, on_duplicate_key_update: {conflict_target: [:place_id, :uuid]}
 end
-
-unique_rows = rows.uniq { |vote| [vote[:place_id], vote[:uuid]] }
-
-Vote.upsert_all(unique_rows, unique_by: :id)

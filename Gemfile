@@ -4,6 +4,7 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "2.7.4"
 
+gem "activerecord-import", "~> 1.4"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap", ">= 4.3.1"
 gem "coffee-rails", "~> 5.0"
@@ -19,6 +20,7 @@ gem "mini_racer"
 gem "puma", "~> 5.6"
 gem "rollbar"
 gem "rails", "~> 7.0.2"
+gem "smarter_csv", "~> 1.6"
 gem "sprockets-rails"
 gem "turbolinks", "~> 5"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
