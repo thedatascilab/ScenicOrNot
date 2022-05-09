@@ -6,7 +6,9 @@ class VotesController < ApplicationController
     # so we silently ignore duplicate votes to not disrupt the user's experience
     vote.save
 
-    redirect_to root_path(just_rated_place_id: vote.place_id)
+    session[:just_rated_place_id] = vote.place_id
+
+    redirect_to root_path
   end
 
   private
