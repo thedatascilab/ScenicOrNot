@@ -22,7 +22,7 @@ class PlacesController < ActionController::Base
   end
 
   def just_rated_place_id
-    params[:just_rated_place_id]
+    @just_rated_place_id ||= session.delete(:just_rated_place_id)
   end
 
   def just_rated_place
