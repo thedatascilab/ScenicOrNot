@@ -10,7 +10,7 @@
 
       &::before {
         content: "";
-        background: url("/assets/generic-top.png") top no-repeat;
+        background: url("generic-top.png") top no-repeat;
         background-size: contain;
         height: 65px;
         width: 507px;
@@ -23,7 +23,7 @@
 
       &::after {
         content: "";
-        background: url("/assets/generic-bottom.png") top no-repeat;
+        background: url("generic-bottom.png") top no-repeat;
         background-size: contain;
         height: 22px;
         width: 507px;

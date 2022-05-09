@@ -30,7 +30,7 @@
         &::before {
           margin-right: 10px;
           content: counter(item);
-          background: url("/assets/counter-bg.png");
+          background: url("counter-bg.png");
           background-size: contain;
           width: 1.5em;
           height: 1.5em;
@@ -66,7 +66,7 @@
   #most-scenic {
     h2 {
       padding-left: 40px;
-      background: url("/assets/top-5.png") left no-repeat;
+      background: url("top-5.png") left no-repeat;
       height: 44px;
       display: table-cell;
       vertical-align: bottom;
@@ -76,7 +76,7 @@
   #least-scenic {
     h2 {
       padding-left: 55px;
-      background: url("/assets/bottom-5.png") bottom left no-repeat;
+      background: url("bottom-5.png") bottom left no-repeat;
       height: 44px;
       display: table-cell;
       vertical-align: bottom;
