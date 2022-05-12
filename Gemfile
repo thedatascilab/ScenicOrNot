@@ -25,6 +25,7 @@ gem "sprockets-rails"
 gem "turbolinks", "~> 5"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 gem "uglifier", ">= 1.3.0"
+gem "sd_notify"
 
 group :development do
   gem "better_errors"
