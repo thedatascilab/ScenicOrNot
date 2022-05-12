@@ -56,3 +56,5 @@ group :test do
   gem "simplecov"
   gem "climate_control"
 end
+
+gem "sd_notify", "~> 0.1.1"
