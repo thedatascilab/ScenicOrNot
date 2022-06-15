@@ -25,7 +25,6 @@ SmarterCSV.process(places_filename, chunk_size: 1000) do |chunk|
   chunk.each do |row|
     geograph_id = row[:geograph_uri].split("/").last
     image_code = row[:image_uri].split("/").last
-    image_uri = [ENV["S3_HOSTNAME"], image_code].join("/")
 
     rows << {
       id: row[:id],
@@ -47,7 +46,7 @@ SmarterCSV.process(places_filename, chunk_size: 1000) do |chunk|
       height: row[:height],
       aspect: row[:aspect],
       geograph_image_uri: row[:image_uri],
-      image_uri: image_uri,
+      image_uri: image_code,
       active_on_geograph: !inactive_images.include?(geograph_id)
     }
   end

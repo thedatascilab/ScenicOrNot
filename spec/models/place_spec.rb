@@ -54,4 +54,12 @@ RSpec.describe Place, type: :model do
       expect(place.map_link).to eql("https://www.openstreetmap.org/?mlat=#{place.lat}&mlon=#{place.lon}")
     end
   end
+
+  describe "#image_location" do
+    it "concatenates the image host with the image_uri" do
+      place = build(:place, image_uri: "fake_image_code.jpg")
+
+      expect(place.image_location).to eql("test/fake_image_code.jpg")
+    end
+  end
 end
