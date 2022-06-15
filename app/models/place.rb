@@ -22,6 +22,6 @@ class Place < ApplicationRecord
   end
 
   def image_location
-    [ENV["S3_HOSTNAME"], image_uri].join("/")
+    [ENV["IMAGE_HOSTNAME"], image_uri].join("/")
   end
 end
