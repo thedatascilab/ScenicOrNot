@@ -8,7 +8,8 @@ class PlacesController < ActionController::Base
   end
 
   def leaderboard
-    @leaderboard = LeaderboardPresenter.new
+    leaderboard = Leaderboard.load_or_new
+    @leaderboard = LeaderboardPresenter.new(leaderboard)
   end
 
   def show

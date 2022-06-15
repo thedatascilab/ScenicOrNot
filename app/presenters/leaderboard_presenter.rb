@@ -1,7 +1,7 @@
 class LeaderboardPresenter
   include ActionView::Helpers::NumberHelper
 
-  def initialize(leaderboard: Leaderboard.new)
+  def initialize(leaderboard)
     @leaderboard = leaderboard
   end
 
