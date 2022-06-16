@@ -20,4 +20,8 @@ class Place < ApplicationRecord
       .having("count(place_id) >= :min_vote_count", {min_vote_count: options[:min_vote_count]})
       .entries
   end
+
+  def image_location
+    [ENV["IMAGE_HOSTNAME"], image_uri].join("/")
+  end
 end

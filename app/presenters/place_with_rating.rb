@@ -3,7 +3,7 @@ class PlaceWithRating
 
   attr_reader :place, :vote_count
 
-  delegate :id, :title, :image_uri, :map_link, :to_param, to: :place
+  delegate :id, :title, :image_location, :map_link, :to_param, to: :place
 
   def initialize(result)
     @place = Place.find(result["place_id"])
