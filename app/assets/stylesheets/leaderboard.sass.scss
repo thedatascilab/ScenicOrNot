@@ -1,19 +1,45 @@
 #leaderboard {
-  display: grid;
-  grid-auto-columns: minmax(0, 1fr);
-  grid-auto-flow: column;
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 
   h2 {
     color: #d9d1aa;
     font-size: 1.7em;
-    line-height: 1em;
-    margin: 20px 0 0 0;
-    padding: 0;
+    line-height: 1.1em;
+    margin: 0;
+
+    &::before {
+      position: relative;
+      bottom: -6px;
+    }
+  }
+
+  #most-scenic, #least-scenic {
+    flex: 1;
+  }
+
+  #most-scenic {
+    h2::before {
+      content: url("top-5.png");
+      height: 44px;
+    }
+  }
+
+  #least-scenic {
+    margin-top: 12px;
+
+    h2::before {
+      content: url("bottom-5.png");
+      height: 36px;
+    }
   }
 
   .inner {
+    border-radius: 3px;
+    color: #554841;
     background-color: #d9d1aa;
+    min-width: 220px;
 
     ol {
       margin: 0;
@@ -44,54 +70,16 @@
         }
 
         .place {
-          display: grid;
+          display: flex;
           font-size: 0.8em;
           gap: 10px;
-          margin: 0 0 10px 0;
           padding: 10px;
 
           img {
-            grid-column: 1 / 2;
             border: 2px solid #fff;
-          }
-
-          div {
-            grid-column: 2 / 2;
           }
         }
       }
-    }
-  }
-
-  #most-scenic {
-    h2 {
-      padding-left: 40px;
-      background: url("top-5.png") left no-repeat;
-      height: 44px;
-      display: table-cell;
-      vertical-align: bottom;
-    }
-  }
-
-  #least-scenic {
-    h2 {
-      padding-left: 55px;
-      background: url("bottom-5.png") bottom left no-repeat;
-      height: 44px;
-      display: table-cell;
-      vertical-align: bottom;
-    }
-  }
-}
-
-@media (min-width: 950px) {
-  #leaderboard {
-    #most-scenic {
-      grid-column: 1 / 2;
-    }
-
-    #least-scenic {
-      grid-column: 2 / 2;
     }
   }
 }

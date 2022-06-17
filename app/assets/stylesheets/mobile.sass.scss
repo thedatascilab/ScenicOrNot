@@ -2,7 +2,6 @@ $primary: #554841;
 $secondary: #c7b199;
 
 @import "bootstrap/scss/bootstrap";
-@import "./leaderboard.sass.scss";
 
 .hide-mobile {
   display: none;
@@ -90,12 +89,6 @@ $secondary: #c7b199;
 
 #content {
   @extend .box;
-}
-
-#leaderboard {
-  h2 {
-    font-weight: bold;
-  }
 }
 
 footer {
