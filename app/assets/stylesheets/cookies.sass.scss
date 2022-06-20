@@ -1,8 +1,42 @@
 #cookieBanner {
   width: 100%;
   text-align: center;
-  background-color: $footer-bg;
+  color: #fff;
+  background-color: $link-colour;
   font-size: 0.9em;
+  padding-bottom: 10px;
+
+  #textContainer {
+    margin-left: 10%;
+    text-align: left;
+
+    a:link,
+    a:visited {
+      text-decoration: underline;
+      color: #fff;
+    }
+
+    a:hover {
+      color: #d9d1aa;
+    }
+  }
+
+  #buttonContainer {
+    margin-left: 10%;
+    text-align: left;
+
+    .cookieButton {
+      color: #fff;
+      background-color: rgb(19, 136, 95);
+      border: none;
+      border-radius: 3px;
+      padding: 5px;
+    }
+
+    .cookieButton:hover,:focus {
+      color: #d9d1aa;
+    }
+  }
 }
 
 ul#cookies {
