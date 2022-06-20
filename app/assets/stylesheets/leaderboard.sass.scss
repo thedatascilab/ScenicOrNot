@@ -43,6 +43,7 @@
 
         .place {
           display: grid;
+          grid-template-columns: 90px 1fr;
           font-size: 0.8em;
           gap: 10px;
           margin: 0 0 10px 0;
