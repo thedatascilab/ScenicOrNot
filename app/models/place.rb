@@ -22,6 +22,6 @@ class Place < ApplicationRecord
   end
 
   def image_location
-    [ENV["IMAGE_HOSTNAME"], image_uri].join("/")
+    [ENV.fetch("IMAGE_HOSTNAME", "geograph_photos"), image_uri].join("/")
   end
 end

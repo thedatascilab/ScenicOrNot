@@ -56,10 +56,24 @@ RSpec.describe Place, type: :model do
   end
 
   describe "#image_location" do
-    it "concatenates the image host with the image_uri" do
-      place = build(:place, image_uri: "fake_image_code.jpg")
+    context "when there is an image hostname env var" do
+      it "concatenates the image hostname with the image_uri" do
+        ClimateControl.modify IMAGE_HOSTNAME: "http://test" do
+          place = build(:place, image_uri: "fake_image_code.jpg")
 
-      expect(place.image_location).to eql("test/fake_image_code.jpg")
+          expect(place.image_location).to eql("http://test/fake_image_code.jpg")
+        end
+      end
+    end
+
+    context "when there is no image hostname env var" do
+      it "concatenates the geograph_photos folder name with the image_uri" do
+        ClimateControl.modify IMAGE_HOSTNAME: nil do
+          place = build(:place, image_uri: "fake_image_code.jpg")
+
+          expect(place.image_location).to eql("geograph_photos/fake_image_code.jpg")
+        end
+      end
     end
   end
 end
