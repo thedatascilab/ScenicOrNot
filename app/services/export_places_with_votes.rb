@@ -14,7 +14,6 @@ class ExportPlacesWithVotes
     image_number = entry["image_uri"].match(image_number_regex)[1]
 
     [
-      entry["geograph_id"],
       entry["lat"],
       entry["lon"],
       entry["avg"].round(4),
@@ -25,7 +24,7 @@ class ExportPlacesWithVotes
   end
 
   def csv_headers
-    ["ID", "Lat", "Lon", "Average", "Variance", "Votes", "Geograph URI"]
+    ["Lat", "Lon", "Average", "Variance", "Votes", "Geograph URI"]
   end
 
   def places_data
@@ -37,7 +36,7 @@ class ExportPlacesWithVotes
   end
 
   def places_query
-    "SELECT places.id, geograph_id, lat, lon, avg(rating), var_pop(rating) AS variance, string_agg(rating::text, ',') AS ratings, image_uri " \
+    "SELECT places.id, lat, lon, avg(rating), var_pop(rating) AS variance, string_agg(rating::text, ',') AS ratings, image_uri " \
     "FROM votes JOIN places ON votes.place_id = places.id " \
     "WHERE active_on_geograph = true " \
     "GROUP BY places.id HAVING count(rating) >= 3"

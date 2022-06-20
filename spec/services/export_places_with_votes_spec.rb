@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe ExportPlacesWithVotes, type: :service do
   describe "#tsv_data" do
-    let(:expected_headers) { ["ID", "Lat", "Lon", "Average", "Variance", "Votes", "Geograph URI"].join("\t") }
+    let(:expected_headers) { ["Lat", "Lon", "Average", "Variance", "Votes", "Geograph URI"].join("\t") }
     let(:place_with_enough_votes) { FactoryBot.create(:place, geograph_id: 7, lat: 51.4073, lon: -0.655554, image_uri: "000340_a49458b3.jpg", active_on_geograph: true) }
 
     before do
@@ -21,7 +21,6 @@ RSpec.describe ExportPlacesWithVotes, type: :service do
         [
           expected_headers,
           [
-            7,
             51.4073,
             -0.655554,
             0.43333e1,
