@@ -4,6 +4,11 @@ $secondary: #c7b199;
 @import "bootstrap/scss/bootstrap";
 @import "./leaderboard.sass.scss";
 
+@font-face {
+  font-family: "OPTIOliver";
+  src: url("OPTIOliver-Display.otf") format("opentype");
+}
+
 .hide-mobile {
   display: none;
 }
@@ -22,6 +27,8 @@ $secondary: #c7b199;
 
   .navbar-brand {
     text-decoration: none;
+    font-family: "OPTIOliver";
+    font-size: 6vw;
   }
 }
 
