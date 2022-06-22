@@ -1,13 +1,16 @@
 #cookieBanner {
+  display: flex;
+  justify-content: center;
+
   width: 100%;
-  text-align: center;
   color: #fff;
   background-color: $link-colour;
   font-size: 0.9em;
   padding-bottom: 10px;
 
   #textContainer {
-    margin-left: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
     text-align: left;
 
     a:link,
@@ -22,10 +25,16 @@
   }
 
   #buttonContainer {
-    margin-left: 10%;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2%;
+    margin-right: 2%;
 
     .cookieButton {
+      margin-top: 5px;
+      margin-bottom: 5px;
+
       color: #fff;
       background-color: rgb(19, 136, 95);
       border: none;
@@ -35,7 +44,14 @@
 
     .cookieButton:hover,:focus {
       color: #d9d1aa;
+      cursor: pointer;
     }
+  }
+}
+
+@media (max-width: 949px) {
+  #cookieBanner {
+    flex-direction: column;
   }
 }
 
