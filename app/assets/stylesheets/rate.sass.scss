@@ -84,6 +84,20 @@
         margin: 10px $margin-left 10px $margin-right;
         object-fit: fill;
       }
+
+      &::after {
+        box-shadow: inset 0px 0px 1px 1px #988470;
+        -moz-box-shadow: inset 0px 0px 1px 1px #988470;
+        -webkit-box-shadow: inset 0px 0px 1px 1px #988470;
+        bottom: 13px;
+        content: "";
+        display: block;
+        left: $margin-right;
+        height: auto;
+        position: absolute;
+        right: $margin-left;
+        top: 9px;
+        width: auto;
       }
     }
   }
