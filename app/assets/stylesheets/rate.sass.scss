@@ -39,13 +39,15 @@
   }
 
   #place {
+    $container-width: 507px;
+
     margin: 0;
     padding: 0;
     background: url("pictureframe-bg.png") repeat-y;
     background-size: contain;
     width: 100%;
     position: relative;
-    width: 490px;
+    width: $container-width;
     z-index: 2;
     top: -5px;
 
