@@ -76,11 +76,14 @@
     }
 
     picture {
-      padding: 15px;
+      $margin-left: 28px;
+      $margin-right: 28px;
 
       img {
-        width: 95%;
-        margin: 10px auto;
+        width: $container-width - ($margin-left + $margin-right);
+        margin: 10px $margin-left 10px $margin-right;
+        object-fit: fill;
+      }
       }
     }
   }
