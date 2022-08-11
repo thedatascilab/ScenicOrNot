@@ -79,6 +79,18 @@
         margin: 10px 30px 10px 30px;
         object-fit: fill;
       }
+
+      &::after {
+        box-shadow: inset 0px 0px 1px 1px #988470;
+        bottom: 14px;
+        content: "";
+        display: block;
+        left: 30px;
+        height: auto;
+        position: absolute;
+        right: 30px;
+        top: 9px;
+        width: auto;
       }
     }
   }
