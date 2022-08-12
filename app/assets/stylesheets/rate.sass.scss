@@ -39,13 +39,15 @@
   }
 
   #place {
+    $container-width: 507px;
+
     margin: 0;
     padding: 0;
     background: url("pictureframe-bg.png") repeat-y;
     background-size: contain;
     width: 100%;
     position: relative;
-    width: 490px;
+    width: $container-width;
     z-index: 2;
     top: -5px;
 
@@ -74,11 +76,28 @@
     }
 
     picture {
-      padding: 15px;
+      $margin-left: 28px;
+      $margin-right: 28px;
 
       img {
-        width: 95%;
-        margin: 10px auto;
+        width: $container-width - ($margin-left + $margin-right);
+        margin: 10px $margin-left 10px $margin-right;
+        object-fit: fill;
+      }
+
+      &::after {
+        box-shadow: inset 0px 0px 1px 1px #988470;
+        -moz-box-shadow: inset 0px 0px 1px 1px #988470;
+        -webkit-box-shadow: inset 0px 0px 1px 1px #988470;
+        bottom: 13px;
+        content: "";
+        display: block;
+        left: $margin-right;
+        height: auto;
+        position: absolute;
+        right: $margin-left;
+        top: 9px;
+        width: auto;
       }
     }
   }
