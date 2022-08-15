@@ -26,19 +26,27 @@
         position: relative;
 
         &::before {
-          margin-right: 10px;
+          position: absolute;
+
           content: counter(item);
-          background: url("counter-bg.png");
-          background-size: contain;
-          width: 1.5em;
-          height: 1.5em;
-          vertical-align: middle;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          border-radius: 50%;
+          background: #554841;
+
+          outline-width: 2px;
+          outline-color: #554841;
+          outline-style: dotted;
+
+          width: 9px;
+          height: 9px;
+          padding: 9px;
           color: #fff;
           text-align: center;
-          display: inline-block;
-          position: absolute;
-          left: -5px;
-          top: -5px;
+          font: 0.8em Arial, sans-serif;
         }
 
         .place {
