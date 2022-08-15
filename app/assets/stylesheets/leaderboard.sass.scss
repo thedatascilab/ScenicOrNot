@@ -26,19 +26,17 @@
         position: relative;
 
         &::before {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           margin-right: 10px;
           content: counter(item);
           background: url("counter-bg.png");
           background-size: contain;
-          width: 1.5em;
-          height: 1.5em;
-          vertical-align: middle;
+          width: 1.6em;
+          height: 1.6em;
           color: #fff;
-          text-align: center;
-          display: inline-block;
           position: absolute;
-          left: -5px;
-          top: -5px;
         }
 
         .place {
@@ -94,6 +92,26 @@
 
     #least-scenic {
       grid-column: 2 / 2;
+    }
+
+    .inner {
+      ol {
+        li {
+          .place {
+            grid-template-columns: auto;
+
+            img {
+              grid-column: 1 / 1;
+              grid-row: 1 / 2;
+            }
+
+            div.details {
+              grid-column: 1 / 1;
+              grid-row: 2 / 2;
+            }
+          }
+        }
+      }
     }
   }
 }
