@@ -15,6 +15,7 @@
       justify-content: center;
 
       img {
+        padding: 0px 15px 0px 15px;
         width: 63px;
         height: 52px;
         display: inline-block;
@@ -23,10 +24,10 @@
       input {
         border: none;
         background: transparent;
-        font: 1.4em $font;
+        font: 1.8em $font;
         color: #fff;
         margin: 10px 0;
-        padding: 10px 7px;
+        padding: 0px 7px;
 
         &:hover {
           text-shadow: 1px 1px #000;
