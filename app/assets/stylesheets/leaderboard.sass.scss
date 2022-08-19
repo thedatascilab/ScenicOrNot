@@ -95,5 +95,25 @@
     #least-scenic {
       grid-column: 2 / 2;
     }
+
+    .inner {
+      ol {
+        li {
+          .place {
+            grid-template-columns: auto;
+
+            img {
+              grid-column: 1 / 1;
+              grid-row: 1 / 2;
+            }
+
+            div.details {
+              grid-column: 1 / 1;
+              grid-row: 2 / 2;
+            }
+          }
+        }
+      }
+    }
   }
 }
