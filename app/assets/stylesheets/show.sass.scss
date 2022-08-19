@@ -3,3 +3,23 @@
     margin-top: 40px;
   }
 }
+
+@media (min-width: 950px) {
+  #show {
+    &:before {
+      content: "";
+      background: url("rating-bg-ropes.png") top no-repeat;
+      background-size: contain;
+      height: 95px;
+      width: 100%;
+      display: block;
+      position: relative;
+      z-index: 3;
+      bottom: 0px;
+    }
+
+    #place {
+      margin-top: -36px;
+    }
+  }
+}
