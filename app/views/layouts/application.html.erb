@@ -15,15 +15,17 @@
   </head>
   <body>
     <%= render "layouts/cookie_banner" %>
-    <div id="container">
-      <section id="header">
-        <%= render "layouts/navigation" %>
-        <%= yield :sidebar %>
-      </section>
-      <main role="main">
-        <%= render "layouts/messages" %>
-        <%= yield %>
-      </main>
+    <div class="background">
+      <div id="container">
+        <section id="header">
+          <%= render "layouts/navigation" %>
+          <%= yield :sidebar %>
+        </section>
+        <main role="main">
+          <%= render "layouts/messages" %>
+          <%= yield %>
+        </main>
+      </div>
     </div>
     <footer>
       <p>A mini-project originally created for <a href="http://www.mysociety.org">mySociety</a>. Now hosted by the <a href="http://datasciencelab.co.uk/"> Data Science Lab</a>, <a href="http://www.wbs.ac.uk/">Warwick Business School</a>.</p>
