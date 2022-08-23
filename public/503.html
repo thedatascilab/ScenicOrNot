@@ -4,63 +4,532 @@
     <title>Service unavailable (503)</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <style>
-      .rails-default-error-page {
-        background-color: #efefef;
-        color: #2e2f30;
-        text-align: center;
-        font-family: arial, sans-serif;
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      font-family: Georgia, Arial, sans-serif;
+      font-size: 1em;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .background {
+      background: linear-gradient(#ded5b8 0 340px, #60ab9f 470px 100%);
+    }
+
+    #rate form {
+      display: inline-block;
+    }
+
+    img {
+      border: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    a:link,
+    a:visited {
+      text-decoration: underline;
+      color: #554841;
+    }
+
+    a:hover {
+      color: #9d4841;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    dl.content {
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      -ms-word-break: break-all;
+      word-break: break-word;
+    }
+
+    @media (min-width: 950px) {
+      .hide-desktop {
+        display: none;
+      }
+      #container {
+        width: 950px;
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 1rem;
+        color: #9d4841;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      #container {
+        grid-template-columns: 196px 650px;
+        background: transparent url(/assets/page-bg-351c1d972924d745da456a41fd743fdaab9e86b64990cb57f9f21111dd40702a.png) repeat-x;
+        flex: 1 0 auto;
+      }
+      #container {
+        width: 950px;
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 1rem;
+      }
+      main {
+        width: 507px;
+        margin: 0 auto;
+        padding: 0;
+        z-index: 1;
+      }
+    }
+    @media (min-width: 950px) {
+      main #content {
+        color: #554841;
+        background-color: #c7b199;
+        padding: 0 20px;
+        margin: 65px auto 75px;
+        position: relative;
+        border-left: 2px solid #554841;
+      }
+      main #content::before {
+        content: "";
+        background: url(/assets/generic-top-10f6d137a410ac39a33532dfdfced9f673c6c7ddc32836edb451d593ef1380b9.png) top no-repeat;
+        background-size: contain;
+        height: 65px;
+        width: 507px;
+        display: block;
+        position: absolute;
+        top: -65px;
+        left: 0;
+        z-index: 100;
+      }
+      main #content::after {
+        content: "";
+        background: url(/assets/generic-bottom-999bc39a1e387f6244b6a3cc5cec01afc17d20f3a53223ca33d6fa91f7e96ab1.png) top no-repeat;
+        background-size: contain;
+        height: 22px;
+        width: 507px;
+        display: block;
+        position: absolute;
+        bottom: -22px;
+        left: -2px;
+        z-index: 100;
+      }
+      main #content h1 {
+        font-size: 1.5em;
+        font-weight: normal;
         margin: 0;
       }
-
-      .rails-default-error-page div.dialog {
-        width: 95%;
-        max-width: 33em;
-        margin: 4em auto 0;
+      main #content h2 {
+        font-size: 1em;
       }
-
-      .rails-default-error-page div.dialog > div {
-        border: 1px solid #ccc;
-        border-right-color: #999;
-        border-left-color: #999;
-        border-bottom-color: #bbb;
-        border-top: #b00100 solid 4px;
-        border-top-left-radius: 9px;
-        border-top-right-radius: 9px;
-        background-color: white;
-        padding: 7px 12% 0;
-        box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+      main #content dl dt {
+        padding-top: 10px;
+        font-weight: bold;
       }
-
-      .rails-default-error-page h1 {
-        font-size: 100%;
-        color: #730e15;
-        line-height: 1.5em;
+    }
+    @media (min-width: 950px) {
+      #rate {
+        background: url(/assets/rating-bg-24e22e4dcbfdf3ad4666d2cc90ad5de143ec2bc6920e0dad5bf5c55ea3389371.png) top no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 95px;
+        margin: 0;
+        padding: 60px 0 30px 0;
+        z-index: 3;
+        position: relative;
       }
-
-      .rails-default-error-page div.dialog > p {
-        margin: 0 0 1em;
-        padding: 1em;
-        background-color: #f7f7f7;
-        border: 1px solid #ccc;
-        border-right-color: #999;
-        border-left-color: #999;
-        border-bottom-color: #999;
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px;
-        border-top-color: #dadada;
-        color: #666;
-        box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+      #rate #inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
       }
-    </style>
-  </head>
+      #rate #inner img {
+        padding: 0px 15px 0px 15px;
+        width: 63px;
+        height: 52px;
+        display: inline-block;
+      }
+      #rate #inner input {
+        border: none;
+        background: transparent;
+        font: 1.8em Georgia, Arial, sans-serif;
+        color: #fff;
+        margin: 10px 0;
+        padding: 0px 7px;
+      }
+      #rate #inner input:hover {
+        text-shadow: 1px 1px #000;
+        cursor: pointer;
+        background: url(/assets/hover-top-8e9b14f072879f3414e7bb7ce20a60d85633575639c8f770721c70049bd580ba.svg) top center no-repeat, url(/assets/hover-bottom-aa587d4288b0edd649e1f054794f866dbfef9f7a468b8ac2f8cec0ea34f254e7.svg) bottom center no-repeat;
+      }
+      #place {
+        margin: 0;
+        padding: 0;
+        background: url(/assets/pictureframe-bg-7921b9b0bc2acaaf7f3fd7db2b231d1f29466352ee058c4875b926d2239968e0.png) repeat-y;
+        background-size: contain;
+        width: 100%;
+        position: relative;
+        width: 507px;
+        z-index: 2;
+        top: -5px;
+      }
+      #place:before {
+        content: "";
+        background: url(/assets/pictureframe-landscape-top-5c5cb31be2685e57a3a3c453e69785a73f65f6ec65b8dda3fb097f5d5cdd6f64.png) top no-repeat;
+        background-size: contain;
+        height: 24px;
+        width: 100%;
+        display: block;
+        position: absolute;
+        z-index: 100;
+        top: -18px;
+      }
+      #place:after {
+        content: "";
+        background: url(/assets/pictureframe-landscape-bottom-7e735cf2c5eab94177a4d8ed02663644b9fb206920fe508d4f8e9ad5b07cb6a1.png) bottom no-repeat;
+        background-size: contain;
+        height: 24px;
+        width: 100%;
+        display: block;
+        position: absolute;
+        z-index: 100;
+        bottom: -15px;
+      }
+      #place picture img {
+        width: 451px;
+        margin: 10px 28px 10px 28px;
+        -o-object-fit: fill;
+          object-fit: fill;
+      }
+      #place picture::after {
+        box-shadow: inset 0px 0px 1px 1px #988470;
+        -moz-box-shadow: inset 0px 0px 1px 1px #988470;
+        -webkit-box-shadow: inset 0px 0px 1px 1px #988470;
+        bottom: 13px;
+        content: "";
+        display: block;
+        left: 28px;
+        height: auto;
+        position: absolute;
+        right: 28px;
+        top: 9px;
+        width: auto;
+      }
+      #licence {
+        padding: 24px 0;
+        text-align: center;
+        color: #fff;
+      }
+    }
+    #leaderboard {
+      display: grid;
+      gap: 20px;
+    }
+    #leaderboard h2 {
+      color: #d9d1aa;
+      font-size: 1.7em;
+      line-height: 1em;
+      margin: 20px 0 0 0;
+      padding: 0;
+    }
+    #leaderboard .inner {
+      background-color: #d9d1aa;
+    }
+    #leaderboard .inner ol {
+      margin: 0;
+      padding: 10px;
+      list-style: none;
+      counter-reset: item;
+    }
+    #leaderboard .inner ol li {
+      margin: 0;
+      padding: 0;
+      counter-increment: item;
+      position: relative;
+    }
+    #leaderboard .inner ol li::before {
+      margin-right: 10px;
+      content: counter(item);
+      background: url(/assets/counter-bg-cc7d2f2ca5910c6447323bd02727119439a56c8da554d4db1a39a2fcc2b9385d.png);
+      background-size: contain;
+      width: 1.5em;
+      height: 1.5em;
+      vertical-align: middle;
+      color: #fff;
+      text-align: center;
+      display: inline-block;
+      position: absolute;
+      left: -5px;
+      top: -5px;
+    }
+    #leaderboard .inner ol li .place {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      font-size: 0.8em;
+      gap: 10px;
+      margin: 0 0 10px 0;
+      padding: 10px;
+    }
+    #leaderboard .inner ol li .place img {
+      grid-column: 1/2;
+      border: 2px solid #fff;
+    }
+    #leaderboard .inner ol li .place div {
+      grid-column: 2/2;
+    }
+    #leaderboard #most-scenic h2 {
+      padding-left: 40px;
+      background: url(/assets/top-5-f7740a7d1614c03242ccef9bb47e3ca8547c84164ebcea9dd9f4964fb0a3af0b.png) left no-repeat;
+      height: 44px;
+      display: table-cell;
+      vertical-align: bottom;
+    }
+    #leaderboard #least-scenic h2 {
+      padding-left: 55px;
+      background: url(/assets/bottom-5-ec9cb0de68be170bd947a3efa57ea04d9846ea4acb7296a95f5dc0378700756c.png) bottom left no-repeat;
+      height: 44px;
+      display: table-cell;
+      vertical-align: bottom;
+    }
 
-  <body class="rails-default-error-page">
+    @media (min-width: 950px) {
+      #leaderboard {
+        grid-auto-columns: minmax(0, 1fr);
+        grid-auto-flow: column;
+      }
+      #leaderboard #most-scenic {
+        grid-column: 1/2;
+      }
+      #leaderboard #least-scenic {
+        grid-column: 2/2;
+      }
+      #leaderboard .inner ol li .place {
+        grid-template-columns: auto;
+      }
+      #leaderboard .inner ol li .place img {
+        grid-column: 1/1;
+        grid-row: 1/2;
+      }
+      #leaderboard .inner ol li .place div.details {
+        grid-column: 1/1;
+        grid-row: 2/2;
+      }
+    }
+    #show #place {
+      margin-top: 40px;
+    }
+
+    @media (min-width: 950px) {
+      #show:before {
+        content: "";
+        background: url(/assets/rating-bg-ropes-046230b76b55dfa215344b3ef164dddd1393d5ec03de61ae1f6e5ea64578a844.png) top no-repeat;
+        background-size: contain;
+        height: 95px;
+        width: 100%;
+        display: block;
+        position: relative;
+        z-index: 3;
+        bottom: 0px;
+      }
+      #show #place {
+        margin-top: -36px;
+      }
+    }
+    #cookieBanner {
+      width: 100%;
+      text-align: center;
+      background-color: #a2c76c;
+      font-size: 0.9em;
+    }
+
+    ul#cookies {
+      list-style-type: disc;
+      margin-left: 1em;
+    }
+
+    @media (max-width: 950px) {
+      nav li#logo img {
+        width: 100%;
+      }
+    }
+    @media (min-width: 950px) {
+      nav li {
+        width: 196px;
+        margin: 0;
+        padding: 0 0 0 35px;
+      }
+      nav li a:link,
+    nav li a:visited {
+        font-size: 1.2em;
+        text-decoration: none;
+      }
+      nav li#logo {
+        padding: 0;
+        width: 197px;
+        height: 162px;
+      }
+      nav li#home {
+        padding-top: 30px;
+        height: 34px;
+        background: url(/assets/home-d7b0d4f38e5be36ea60dc601173f076695b3e0475ffbf07753e7c1e8a09c3b2d.png) no-repeat;
+        background-size: 197px 64px;
+      }
+      nav li#faq {
+        padding-top: 30px;
+        height: 34px;
+        background: url(/assets/faq-611f146576575830a13fbdd2cd919c34456c3bf231ece180677f9c8589ada1fd.png) no-repeat;
+        background-size: 197px 64px;
+      }
+      nav li#leaderboard {
+        padding-top: 30px;
+        height: 34px;
+        background: url(/assets/leaderboard-ab0d4a04bd6aca7757515d8474575fa5952d68c72173f0e480c865df41177ae0.png) no-repeat;
+        background-size: 197px 64px;
+      }
+    }
+    @media (min-width: 950px) {
+      #sidebar {
+        position: relative;
+        color: #554841;
+        background: url(/assets/rated-board-tile-47f61f486e7009f390c51c5613e009d20fa5316d0bfd30d86152174c25b53b08.png) repeat-y;
+        background-size: contain;
+        margin: 40px 0 40px 0;
+        padding: 0px 20px 10px 20px;
+      }
+      #sidebar:before {
+        content: "";
+        background: url(/assets/rated-board-top-dfe691022163a5a3fe23d27e0aa294080657976212cf42e551c977817297e7ba.png) top no-repeat;
+        background-size: contain;
+        height: 40px;
+        width: 197px;
+        display: block;
+        position: absolute;
+        top: -40px;
+        left: 0;
+        z-index: 100;
+      }
+      #sidebar:after {
+        content: "";
+        background: url(/assets/rated-board-bottom-0d69f065e2c7576a7ba84e4e0dc8076e1b8051494b016d639869bfd47ec56e10.png) bottom no-repeat;
+        background-size: contain;
+        height: 40px;
+        width: 197px;
+        display: block;
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        z-index: 100;
+      }
+      #sidebar img {
+        width: 100%;
+        margin: 10px 0;
+        border: 2px solid white;
+      }
+    }
+    @media (min-width: 950px) {
+      footer {
+        position: relative;
+        background-color: #a2c76c;
+        padding: 30px 0;
+        font-size: 0.8em;
+        text-align: center;
+        flex-shrink: 0;
+      }
+      footer:before {
+        content: "";
+        width: 100%;
+        height: 20px;
+        background: transparent url(/assets/footer-bg-f107bf492e950876465795931d4c5cfc57a62c7bfe643b53ab64bac102c0c5dd.png) top center no-repeat;
+        position: absolute;
+        top: -16px;
+        left: 0;
+      }
+      footer ul li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+  </style>
+</head>
+
+  <body>
     <!-- This file lives in public/503.html -->
-    <div class="dialog">
-      <div>
-        <h1>Site update in progress</h1>
+    <div class="background">
+      <div id="container">
+        <section id="header">
+          <nav class="navbar navbar-dark">
+  <div class="container">
+    <a class="navbar-brand hide-desktop" href="/">
+      <img width="30" height="30" class="d-inline-block align-text-top" src="/assets/mobile-brand-f0b70bc8532a53e65aab0df34de47ee511d87c8c62d694e2a9c22304b01a3f4b.png">
+      ScenicOrNot
+    </a>
+    <button class="navbar-toggler hide-desktop" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navigation">
+      <ul class="nav">
+        <li id="logo" class="hide-mobile">
+          <a href="/">
+            <img alt="ScenicOrNot" width="100%" src="/assets/logo-4652efc84afa3f03db1eab9ee289425abac6cd1b804ad82a71c205bc58c8b040.png">
+          </a>
+        </li>
+        <li id="home" class="nav-item">
+          <a href="/" class="nav-link">
+            Home
+          </a>
+        </li>
+        <li id="faq" class="nav-item">
+          <a href="/faq" class="nav-link">
+            FAQ
+          </a>
+        </li>
+        <li id="leaderboard" class="nav-item">
+          <a href="/leaderboard" class="nav-link">
+            Leaderboard
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+            <aside id="sidebar" class="alert alert-primary alert-dismissible fade show" role="alert">
+      ScenicOrNot helps you to explore every corner of England, Scotland and Wales, all the while comparing your aesthetic judgements with fellow players.
+    <button type="button" class="btn-close hide-desktop" data-bs-dismiss="alert" aria-label="Close"></button>
+  </aside>
+
+        </section>
+        <main role="main">
+        
+          <div id="content">
+            <h1>Site update in progress</h1>
+            <p>This site is being updated, and can't currently be accessed.</p>
+          </div>
+        </main>
       </div>
-      <p>This site is being updated, and can't currently be accessed.</p>
+      <footer>
+        <p>A mini-project originally created for <a href="http://www.mysociety.org">mySociety</a>. Now hosted by the <a href="http://datasciencelab.co.uk/"> Data Science Lab</a>, <a href="http://www.wbs.ac.uk/">Warwick Business School</a>.</p>
+        <ul>
+          <li>
+            <a href="http://datasciencelab.co.uk/contact-us/">Contact us</a>.
+          </li>
+          <li>
+            <a href="/data_downloads">Data downloads</a>.
+          </li>
+          <li>
+            <a href="/cookies">Privacy and cookies</a>.
+          </li>
+        </ul>
+      </footer>
     </div>
   </body>
 </html>
