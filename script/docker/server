@@ -12,4 +12,4 @@ cd "$(dirname "$0")/../.."
 # in the background and then use attach to create an interactive prompt.
 docker-compose up --detach
 
-docker attach scenic-or-not_web_1
+docker attach scenicornot_web_1

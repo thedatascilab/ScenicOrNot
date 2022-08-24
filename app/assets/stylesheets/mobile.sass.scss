@@ -3,9 +3,20 @@ $secondary: #c7b199;
 $tertiary: #998874;
 
 $border: $tertiary;
+$displayfont: 'OPTIOliver-Display';
 
 @import "bootstrap/scss/bootstrap";
 @import "./leaderboard.sass.scss";
+
+@font-face {
+  font-family: 'OPTIOliver-Display';
+  src:url('/assets/OPTIOliver-Display.ttf.woff') format('woff'),
+      url('/assets/OPTIOliver-Display.ttf.svg#OPTIOliver-Display') format('svg'),
+      url('/assets/OPTIOliver-Display.ttf.eot'),
+      url('/assets/OPTIOliver-Display.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
 
 .hide-mobile {
   display: none;
@@ -43,6 +54,11 @@ $border: $tertiary;
   padding-left: 0;
   padding-right: 0;
   color: $primary;
+
+  .rate-heading {
+    font-family: $displayfont;
+    text-transform: uppercase;
+  }
 
   .range {
     display: flex;
