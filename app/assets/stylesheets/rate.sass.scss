@@ -9,6 +9,10 @@
     z-index: 3;
     position: relative;
 
+    .range {
+      display: flex;
+    }
+
     #inner {
       display: flex;
       flex-direction: row;
