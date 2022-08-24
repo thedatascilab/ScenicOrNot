@@ -9,8 +9,10 @@ body {
   color: #fff;
   margin: 0;
   padding: 0;
-  background: linear-gradient(#ded5b8, $background);
-  background-attachment: fixed;
+}
+
+.background {
+  background: linear-gradient(#ded5b8 0 340px, $background 470px 100%);
 }
 
 #rate form {
