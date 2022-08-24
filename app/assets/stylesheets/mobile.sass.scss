@@ -1,5 +1,8 @@
 $primary: #554841;
 $secondary: #c7b199;
+$tertiary: #998874;
+
+$border: $tertiary;
 
 @import "bootstrap/scss/bootstrap";
 @import "./leaderboard.sass.scss";
@@ -11,7 +14,7 @@ $secondary: #c7b199;
 .box {
   background-color: $secondary;
   padding: 1em;
-  border: 5px solid $primary;
+  border: 5px solid $border;
   margin: 20px auto;
   width: 95%;
 }
@@ -39,33 +42,30 @@ $secondary: #c7b199;
   text-align: center;
   padding-left: 0;
   padding-right: 0;
+  color: $primary;
 
   .range {
-    width: 100%;
-    font-size: 0.8em;
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+    justify-content: space-between;
+  }
 
+  .less-scenic,
+  .very-scenic {
+    font-size:  2.5vw;
     img {
-      width: 25%;
-    }
-
-    padding: 0.4em;
-
-    .less-scenic {
-      text-align: left;
-      grid-column: 1;
-    }
-
-    .very-scenic {
-      text-align: right;
-      grid-column: 2;
+      width: 8.65vw;
+      margin-bottom: 7px;
     }
   }
 
   input {
     @extend .btn, .btn-primary, .btn-sm;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
     margin-top: 7px;
+    font-size: 3.75vw;
+    padding: 1.5625vw 1.5625vw 1.25vw!important;
+    margin: 7px 0.6015625vw 0;
   }
 }
 
