@@ -28,13 +28,17 @@ $displayfont: 'OPTIOliver-Display';
   width: 95%;
   position: relative; 
   z-index:1;
-
+  
   &:before {
     z-index:-1;
     content:"";
     position: absolute;
-    background: radial-gradient(circle at 0 0, transparent 15px, $secondary calc(15px)) top left, radial-gradient(circle at 100% 0, transparent 15px, $secondary calc(15px)) top right, radial-gradient(circle at 0 100%, transparent 15px, $secondary calc(15px)) bottom left, radial-gradient(circle at 100% 100%, transparent 15px, $secondary calc(15px)) bottom right;
-    background-size: 50% 50%;
+    background: linear-gradient($tertiary, $tertiary)  top 15px left 0,
+    radial-gradient(circle at 0 0, transparent 18px, $secondary calc(18px)) top left, 
+    radial-gradient(circle at 100% 0, transparent 18px, $secondary calc(18px)) top right, 
+    radial-gradient(circle at 0 100%, transparent 18px, $secondary calc(18px)) bottom left, 
+    radial-gradient(circle at 100% 100%, transparent 18px, $secondary calc(18px)) bottom right;
+    background-size: 3px calc(100% - 15px), 50% 50%, 50% 50%, 50% 50%, 50% 50%;
     background-repeat: no-repeat;
     right: 0;
     left: 0;
@@ -45,13 +49,16 @@ $displayfont: 'OPTIOliver-Display';
     z-index:-2;
     content:"";
     position: absolute;
-    background: radial-gradient(circle at 0 0, transparent 15px, $tertiary calc(15px)) top left, radial-gradient(circle at 100% 0, transparent 15px, $tertiary calc(15px)) top right, radial-gradient(circle at 0 100%, transparent 15px, $tertiary calc(15px)) bottom left, radial-gradient(circle at 100% 100%, transparent 15px, $tertiary calc(15px)) bottom right;
+    background: radial-gradient(circle at 0 0, transparent 15px, $tertiary calc(15px)) top left, 
+    radial-gradient(circle at 100% 0, transparent 15px, $tertiary calc(15px)) top right, 
+    radial-gradient(circle at 0 100%, transparent 15px, $tertiary calc(15px)) bottom left, 
+    radial-gradient(circle at 100% 100%, transparent 15px, $tertiary calc(15px)) bottom right;
     background-size: 50% 50%;
     background-repeat: no-repeat;
-    right: -5px;
-    left: -5px;
-    top: -5px;
-    bottom: -5px;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
   }
 }
 
