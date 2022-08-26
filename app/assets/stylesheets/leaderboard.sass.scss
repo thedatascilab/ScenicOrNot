@@ -1,3 +1,28 @@
+@mixin flower($colour: #554841, $rotation: 30deg) {
+  content: '';
+  top: 0;
+  left: 0;
+  position: absolute;
+  border-radius: 5px;
+  width: 25px;
+  height: 25px;
+  background-color: $colour;
+  transform: rotate($rotation);
+}
+
+.badge {
+  z-index: 20;
+  @include flower($colour: #554841, $rotation: 15deg);
+}
+
+.badge::before {
+  @include flower($colour: #554841, $rotation: 30deg);
+}
+
+.badge::after {
+  @include flower($colour: #554841, $rotation: -30deg);
+}
+
 #leaderboard {
   display: grid;
   gap: 20px;
@@ -26,19 +51,23 @@
         position: relative;
 
         &::before {
-          margin-right: 10px;
+          z-index: 40;
+          position: absolute;
+
           content: counter(item);
-          background: url("counter-bg.png");
-          background-size: contain;
-          width: 1.5em;
-          height: 1.5em;
-          vertical-align: middle;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          box-sizing: initial;
+
+          width: 8px;
+          height: 8px;
+          padding: 8px;
           color: #fff;
           text-align: center;
-          display: inline-block;
-          position: absolute;
-          left: -5px;
-          top: -5px;
+          font: 1em Charter, Cambria, Arial, sans-serif;
         }
 
         .place {
