@@ -1,8 +1,72 @@
 #cookieBanner {
+  display: flex;
+  justify-content: center;
+
   width: 100%;
-  text-align: center;
-  background-color: $footer-bg;
+  color: #fff;
+  background-color: $link-colour;
   font-size: 0.9em;
+  padding-bottom: 10px;
+
+  #textContainer {
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: left;
+
+    a:link,
+    a:visited {
+      text-decoration: underline;
+      color: #fff;
+    }
+
+    a:hover {
+      color: #d9d1aa;
+    }
+  }
+
+  #buttonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2%;
+    margin-right: 2%;
+
+    .cookieButton {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-family: $font;
+      color: #fff;
+      background-color: #049773;
+      border: 3px solid #049773;
+      border-radius: 3px;
+      padding: 7px 16px 8px;
+    }
+
+    .cookieButton:hover {
+      background: #A4C670; 
+      color: #554841;
+      border-color: #A4C670;
+      cursor: pointer;
+    }
+
+    .cookieButton:focus {
+      background: #049773; 
+      border-color: #A4C670; 
+      color: #FFFFFF;
+    }
+
+    .cookieButton:active {
+      background: #D8D0AA; 
+      border-color: #FFFFFF; 
+      color: #554841;
+    }
+  }
+}
+
+@media (max-width: 949px) {
+  #cookieBanner {
+    flex-direction: column;
+  }
 }
 
 ul#cookies {
