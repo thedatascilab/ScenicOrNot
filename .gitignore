@@ -46,6 +46,7 @@
 ### Environment variables
 .env
 .env.*
+!.env.example
 ### Logs
 *.log*
 ### Secrets and keys
