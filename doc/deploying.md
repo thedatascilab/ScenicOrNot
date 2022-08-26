@@ -7,4 +7,3 @@
 - Deployments are invoked manually through the AWS Console. The account is owned
   and run by the team at Warwick Business School
 - There is no staging environment
-- The released app is running within a Docker container
