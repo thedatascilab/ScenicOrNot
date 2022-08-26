@@ -71,7 +71,7 @@ RSpec.describe Place, type: :model do
         ClimateControl.modify IMAGE_HOSTNAME: nil do
           place = build(:place, image_uri: "fake_image_code.jpg")
 
-          expect(place.image_location).to eql("geograph_photos/fake_image_code.jpg")
+          expect(place.image_location).to eql("/geograph_photos/fake_image_code.jpg")
         end
       end
     end
