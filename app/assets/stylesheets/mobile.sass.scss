@@ -3,25 +3,25 @@ $secondary: #c7b199;
 $tertiary: #998874;
 
 $border: $tertiary;
-$displayfont: 'OPTIOliver-Display';
+$displayfont: "OPTIOliver-Display";
 
 @import "bootstrap/scss/bootstrap";
 @import "./leaderboard.sass.scss";
 
 @font-face {
-  font-family: 'OPTIOliver-Display';
-  src:url('/assets/OPTIOliver-Display.ttf.woff') format('woff'),
-      url('/assets/OPTIOliver-Display.ttf.svg#OPTIOliver-Display') format('svg'),
-      url('/assets/OPTIOliver-Display.ttf.eot'),
-      url('/assets/OPTIOliver-Display.ttf.eot?#iefix') format('embedded-opentype'); 
-      font-weight: normal;
-      font-style: normal;
-    }
-    
-    .hide-mobile {
-      display: none;
-    }
-    
+  font-family: "OPTIOliver-Display";
+  src: url("/assets/OPTIOliver-Display.ttf.woff") format("woff"),
+    url("/assets/OPTIOliver-Display.ttf.svg#OPTIOliver-Display") format("svg"),
+    url("/assets/OPTIOliver-Display.ttf.eot"),
+    url("/assets/OPTIOliver-Display.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.hide-mobile {
+  display: none;
+}
+
 // Bootstrap overrides
 .alert {
   --bs-alert-margin-bottom: 0;
@@ -31,14 +31,29 @@ $displayfont: 'OPTIOliver-Display';
   padding: 1em;
   margin: 0 auto;
   width: 95%;
-  position: relative; 
-  z-index:1;
+  position: relative;
+  z-index: 1;
 
   &:before {
-    z-index:-1;
-    content:"";
+    z-index: -1;
+    content: "";
     position: absolute;
-    background: radial-gradient(circle at 0 0, transparent 15px, $secondary calc(15px)) top left, radial-gradient(circle at 100% 0, transparent 15px, $secondary calc(15px)) top right, radial-gradient(circle at 0 100%, transparent 15px, $secondary calc(15px)) bottom left, radial-gradient(circle at 100% 100%, transparent 15px, $secondary calc(15px)) bottom right;
+    background: radial-gradient(
+          circle at 0 0,
+          transparent 15px,
+          $secondary calc(15px)
+        )
+        top left,
+      radial-gradient(circle at 100% 0, transparent 15px, $secondary calc(15px))
+        top right,
+      radial-gradient(circle at 0 100%, transparent 15px, $secondary calc(15px))
+        bottom left,
+      radial-gradient(
+          circle at 100% 100%,
+          transparent 15px,
+          $secondary calc(15px)
+        )
+        bottom right;
     background-size: 50% 50%;
     background-repeat: no-repeat;
     right: 0;
@@ -47,10 +62,25 @@ $displayfont: 'OPTIOliver-Display';
     bottom: 0;
   }
   &:after {
-    z-index:-2;
-    content:"";
+    z-index: -2;
+    content: "";
     position: absolute;
-    background: radial-gradient(circle at 0 0, transparent 15px, $tertiary calc(15px)) top left, radial-gradient(circle at 100% 0, transparent 15px, $tertiary calc(15px)) top right, radial-gradient(circle at 0 100%, transparent 15px, $tertiary calc(15px)) bottom left, radial-gradient(circle at 100% 100%, transparent 15px, $tertiary calc(15px)) bottom right;
+    background: radial-gradient(
+          circle at 0 0,
+          transparent 15px,
+          $tertiary calc(15px)
+        )
+        top left,
+      radial-gradient(circle at 100% 0, transparent 15px, $tertiary calc(15px))
+        top right,
+      radial-gradient(circle at 0 100%, transparent 15px, $tertiary calc(15px))
+        bottom left,
+      radial-gradient(
+          circle at 100% 100%,
+          transparent 15px,
+          $tertiary calc(15px)
+        )
+        bottom right;
     background-size: 50% 50%;
     background-repeat: no-repeat;
     right: -5px;
@@ -63,8 +93,8 @@ $displayfont: 'OPTIOliver-Display';
 .rope {
   display: block;
   height: 32px;
-  background: url('/assets/rope-tile.svg') top left 13.75vw repeat-y,
-  url('/assets/rope-tile.svg') top right 13.75vw repeat-y;
+  background: url("/assets/rope-tile.svg") top left 13.75vw repeat-y,
+    url("/assets/rope-tile.svg") top right 13.75vw repeat-y;
 }
 
 .navbar {
@@ -111,7 +141,7 @@ $displayfont: 'OPTIOliver-Display';
 
   .less-scenic,
   .very-scenic {
-    font-size:  clamp(7px, 2.5vw, 13px);
+    font-size: clamp(7px, 2.5vw, 13px);
     margin-bottom: calc(-10px + 2.1875vw);
     img {
       width: clamp(27px, 8.65vw, 48px);
@@ -125,7 +155,7 @@ $displayfont: 'OPTIOliver-Display';
     font-weight: bold;
     margin-top: 7px;
     font-size: 3.75vw;
-    padding: 1.5625vw 1.5625vw 1.25vw!important;
+    padding: 1.5625vw 1.5625vw 1.25vw !important;
     margin: 2.1875vw 0.6015625vw 2.1875vw;
   }
 }
