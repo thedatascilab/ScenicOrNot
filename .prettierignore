@@ -31,7 +31,6 @@
 *.eot
 *.woff
 /public/assets/
-/public/*.html
 /app/assets/builds/
 /coverage
 .DS_Store
