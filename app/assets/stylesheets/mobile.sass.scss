@@ -14,17 +14,22 @@ $displayfont: 'OPTIOliver-Display';
       url('/assets/OPTIOliver-Display.ttf.svg#OPTIOliver-Display') format('svg'),
       url('/assets/OPTIOliver-Display.ttf.eot'),
       url('/assets/OPTIOliver-Display.ttf.eot?#iefix') format('embedded-opentype'); 
-  font-weight: normal;
-  font-style: normal;
-}
-
-.hide-mobile {
-  display: none;
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    .hide-mobile {
+      display: none;
+    }
+    
+// Bootstrap overrides
+.alert {
+  --bs-alert-margin-bottom: 0;
 }
 
 .box {
   padding: 1em;
-  margin: 20px auto;
+  margin: 0 auto;
   width: 95%;
   position: relative; 
   z-index:1;
@@ -53,6 +58,13 @@ $displayfont: 'OPTIOliver-Display';
     top: -5px;
     bottom: -5px;
   }
+}
+
+.rope {
+  display: block;
+  height: 32px;
+  background: url('/assets/rope-tile.svg') top left 13.75vw repeat-y,
+  url('/assets/rope-tile.svg') top right 13.75vw repeat-y;
 }
 
 .navbar {
@@ -152,4 +164,5 @@ footer {
   background-color: #a2c76c;
   padding: 20px;
   text-align: center;
+  margin-top: 38px;
 }
