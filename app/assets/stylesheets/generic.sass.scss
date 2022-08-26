@@ -11,7 +11,7 @@ body {
   padding: 0;
 }
 
-.background {
+.main-outer-container {
   background: linear-gradient(#ded5b8 0 340px, $background 470px 100%);
 }
 
@@ -56,30 +56,23 @@ dl.content {
     display: none;
   }
 
-  #container {
-    width: 950px;
-    margin: 0 auto;
-    display: grid;
-    grid-gap: 1rem;
-    color: $link-hover-colour;
-  }
-
   body {
     display: flex;
     flex-direction: column;
   }
 
-  #container {
-    grid-template-columns: 196px 650px;
-    background: transparent url("page-bg.png") repeat-x;
+  .main-outer-container {
     flex: 1 0 auto;
   }
 
-  #container {
+  .main-inner-container {
     width: 950px;
     margin: 0 auto;
     display: grid;
+    grid-template-columns: 196px 650px;
     grid-gap: 1rem;
+    background: transparent url("page-bg.png") repeat-x;
+    color: $link-hover-colour;
   }
 
   main {
