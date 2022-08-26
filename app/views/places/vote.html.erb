@@ -12,27 +12,27 @@
 
 <div id="rate">
   <div id="inner">
-    <h3 class="hide-desktop">Voting Board</h3>
-    <p class="hide-desktop">Tap a number below to vote</p>
-    <%= image_tag "not-scenic.png", alt: "Not Scenic", class: "hide-mobile" %>
-    <% (1..10).to_a.each do |i| %>
-      <%= form_for([@place, @vote]) do |f| %>
-        <%= f.hidden_field "rating", value: i.to_s %>
-        <%= f.submit i.to_s %>
-      <% end %>
-    <% end %>
-    <%= image_tag "very-scenic.png", alt: "Very Scenic", class: "hide-mobile" %>
-    <div class="range hide-desktop">
-      <div class="less-scenic">
-        Not Scenic<br/>
-        <%= image_tag "not-scenic-mobile.png", alt: "Not Scenic" %>
+    <h3 class="hide-desktop rate-heading">Voting Board</h3>
+    <p class="hide-desktop rate-description"><span aria-hidden="true"> - </span>Tap a number below to vote<span aria-hidden="true"> - </span></p>
+    <div class="range">
+      <div class="less-scenic hide-desktop">
+        <%= image_tag "not-scenic-mobile.png", alt: "Not Scenic" %><br/>
+        Not<br />Scenic
       </div>
 
-      <div class="very-scenic">
-        Very Scenic<br/>
-        <%= image_tag "very-scenic-mobile.png", alt: "Very Scenic" %>
+      <%= image_tag "not-scenic.png", alt: "Not Scenic", class: "hide-mobile" %>
+      <% (1..10).to_a.each do |i| %>
+        <%= form_for([@place, @vote]) do |f| %>
+          <%= f.hidden_field "rating", value: i.to_s %>
+          <%= f.submit i.to_s %>
+          <% end %>
+          <% end %>
+      <div class="very-scenic hide-desktop">
+        <%= image_tag "very-scenic-mobile.png", alt: "Very Scenic" %><br/>
+        Very<br />Scenic
       </div>
-    </div>
+      <%= image_tag "very-scenic.png", alt: "Very Scenic", class: "hide-mobile" %>
+      </div>
   </div>
 </div>
 

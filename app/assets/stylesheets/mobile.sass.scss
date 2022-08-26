@@ -1,19 +1,58 @@
 $primary: #554841;
 $secondary: #c7b199;
+$tertiary: #998874;
+
+$border: $tertiary;
+$displayfont: 'OPTIOliver-Display';
 
 @import "bootstrap/scss/bootstrap";
 @import "./leaderboard.sass.scss";
+
+@font-face {
+  font-family: 'OPTIOliver-Display';
+  src:url('/assets/OPTIOliver-Display.ttf.woff') format('woff'),
+      url('/assets/OPTIOliver-Display.ttf.svg#OPTIOliver-Display') format('svg'),
+      url('/assets/OPTIOliver-Display.ttf.eot'),
+      url('/assets/OPTIOliver-Display.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
 
 .hide-mobile {
   display: none;
 }
 
 .box {
-  background-color: $secondary;
   padding: 1em;
-  border: 5px solid $primary;
   margin: 20px auto;
   width: 95%;
+  position: relative; 
+  z-index:1;
+
+  &:before {
+    z-index:-1;
+    content:"";
+    position: absolute;
+    background: radial-gradient(circle at 0 0, transparent 15px, $secondary calc(15px)) top left, radial-gradient(circle at 100% 0, transparent 15px, $secondary calc(15px)) top right, radial-gradient(circle at 0 100%, transparent 15px, $secondary calc(15px)) bottom left, radial-gradient(circle at 100% 100%, transparent 15px, $secondary calc(15px)) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+  &:after {
+    z-index:-2;
+    content:"";
+    position: absolute;
+    background: radial-gradient(circle at 0 0, transparent 15px, $tertiary calc(15px)) top left, radial-gradient(circle at 100% 0, transparent 15px, $tertiary calc(15px)) top right, radial-gradient(circle at 0 100%, transparent 15px, $tertiary calc(15px)) bottom left, radial-gradient(circle at 100% 100%, transparent 15px, $tertiary calc(15px)) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    right: -5px;
+    left: -5px;
+    top: -5px;
+    bottom: -5px;
+  }
 }
 
 .navbar {
@@ -39,33 +78,43 @@ $secondary: #c7b199;
   text-align: center;
   padding-left: 0;
   padding-right: 0;
+  color: $primary;
+
+  .rate-heading {
+    font-family: $displayfont;
+    text-transform: uppercase;
+  }
+
+  .rate-description {
+    margin-bottom: 11px;
+  }
 
   .range {
-    width: 100%;
-    font-size: 0.8em;
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    top: calc(-33px + 0.9375vw);
+  }
 
+  .less-scenic,
+  .very-scenic {
+    font-size:  clamp(7px, 2.5vw, 13px);
+    margin-bottom: calc(-10px + 2.1875vw);
     img {
-      width: 25%;
-    }
-
-    padding: 0.4em;
-
-    .less-scenic {
-      text-align: left;
-      grid-column: 1;
-    }
-
-    .very-scenic {
-      text-align: right;
-      grid-column: 2;
+      width: clamp(27px, 8.65vw, 48px);
+      margin-bottom: 7px;
     }
   }
 
   input {
     @extend .btn, .btn-primary, .btn-sm;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
     margin-top: 7px;
+    font-size: 3.75vw;
+    padding: 1.5625vw 1.5625vw 1.25vw!important;
+    margin: 2.1875vw 0.6015625vw 2.1875vw;
   }
 }
 
