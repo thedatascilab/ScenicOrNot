@@ -12,11 +12,10 @@ services:
     depends_on:
       - test-db
     env_file:
-       - .env.test
+      - .env.test
     environment:
       DATABASE_URL: postgres://postgres:password@test-db:5432/app-test
       DATABASE_CLEANER_ALLOW_REMOTE_DATABASE_URL: "true"
-      AUTOMATICALLY_FIX_LINTING: "false"
     volumes:
       - .:/srv/app
     tty: true
