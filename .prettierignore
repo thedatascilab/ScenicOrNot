@@ -28,6 +28,8 @@
 *.tsv
 *.map
 *.svg
+*.eot
+*.woff
 /public/assets/*
 /coverage
 .DS_Store
