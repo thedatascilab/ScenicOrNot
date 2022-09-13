@@ -17,7 +17,7 @@
     "@babel/runtime": "^7.19.0",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.2",
-    "@rollup/plugin-node-resolve": "^14.0.1",
+    "@rollup/plugin-node-resolve": "^14.1.0",
     "bootstrap": "^5.2.1",
     "core-js": "3",
     "js-cookie": "^3.0.1",
