@@ -12218,7 +12218,7 @@
         padding: 0;
       }
 
-      .background {
+      .main-outer-container {
         background: linear-gradient(#ded5b8 0 340px, #60ab9f 470px 100%);
       }
 
@@ -12261,29 +12261,23 @@
         .hide-desktop {
           display: none;
         }
-        #container {
-          width: 950px;
-          margin: 0 auto;
-          display: grid;
-          grid-gap: 1rem;
-          color: #9d4841;
-        }
         body {
           display: flex;
           flex-direction: column;
         }
-        #container {
-          grid-template-columns: 196px 650px;
-          background: transparent
-            url(/assets/page-bg-351c1d972924d745da456a41fd743fdaab9e86b64990cb57f9f21111dd40702a.png)
-            repeat-x;
+        .main-outer-container {
           flex: 1 0 auto;
         }
-        #container {
+        .main-inner-container {
           width: 950px;
           margin: 0 auto;
           display: grid;
+          grid-template-columns: 196px 650px;
           grid-gap: 1rem;
+          background: transparent
+            url(/assets/page-bg-351c1d972924d745da456a41fd743fdaab9e86b64990cb57f9f21111dd40702a.png)
+            repeat-x;
+          color: #9d4841;
         }
         main {
           width: 507px;
@@ -12685,8 +12679,8 @@
 
   <body>
     <!-- This file lives in public/500.html -->
-    <div class="background">
-      <div id="container">
+    <div class="main-outer-container">
+      <div class="main-inner-container">
         <section id="header">
           <nav class="navbar navbar-dark">
             <div class="container">
