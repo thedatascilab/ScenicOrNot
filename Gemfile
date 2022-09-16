@@ -20,7 +20,7 @@ gem "mini_racer"
 gem "puma", "~> 5.6"
 gem "rollbar"
 gem "rails", "~> 7.0.4"
-gem "smarter_csv", "~> 1.6"
+gem "smarter_csv", "~> 1.7"
 gem "sprockets-rails"
 gem "turbolinks", "~> 5"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]

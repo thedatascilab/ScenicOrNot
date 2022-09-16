@@ -1,3 +1,5 @@
+require "csv"
+
 class ExportPlacesWithVotes
   def tsv_data
     CSV.generate(col_sep: "\t") do |csv|
