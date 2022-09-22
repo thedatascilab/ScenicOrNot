@@ -102,6 +102,8 @@ $displayfont: "OPTIOliver-Display";
   border-bottom: 1px solid $primary;
 
   .navbar-brand {
+    font-family: "OPTIOliver-Display";
+    text-transform: uppercase;
     text-decoration: none;
   }
 }
