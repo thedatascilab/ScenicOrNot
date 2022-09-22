@@ -9,9 +9,12 @@ body {
   color: #fff;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-outer-container {
+  flex: 1 0 auto;
   background: linear-gradient(#ded5b8 0 340px, $background 470px 100%);
 }
 
@@ -56,17 +59,9 @@ dl.content {
     display: none;
   }
 
-  body {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .main-outer-container {
-    flex: 1 0 auto;
-  }
-
   .main-inner-container {
     width: 950px;
+    min-height: 100%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 196px 650px;
