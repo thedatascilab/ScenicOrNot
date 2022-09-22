@@ -93,8 +93,8 @@ $displayfont: "OPTIOliver-Display";
 .rope {
   display: block;
   height: 32px;
-  background: url("/assets/rope-tile.svg") top left 13.75vw repeat-y,
-    url("/assets/rope-tile.svg") top right 13.75vw repeat-y;
+  background: url("rope-tile.svg") top left 13.75vw repeat-y,
+    url("rope-tile.svg") top right 13.75vw repeat-y;
 }
 
 .navbar {
