@@ -160,20 +160,6 @@ $displayfont: "OPTIOliver-Display";
   }
 }
 
-#cookieBanner {
-  width: 100%;
-  text-align: center;
-  background-color: $secondary;
-  font-size: 0.9em;
-  margin: 0;
-  padding: 1em;
-
-  button {
-    @extend .btn, .btn-primary, .btn-sm;
-    margin: 0.5em;
-  }
-}
-
 #licence {
   @extend .box;
   text-align: center;
