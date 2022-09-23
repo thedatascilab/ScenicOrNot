@@ -10,10 +10,10 @@ $displayfont: "OPTIOliver-Display";
 
 @font-face {
   font-family: "OPTIOliver-Display";
-  src: url("/assets/OPTIOliver-Display.ttf.woff") format("woff"),
-    url("/assets/OPTIOliver-Display.ttf.svg#OPTIOliver-Display") format("svg"),
-    url("/assets/OPTIOliver-Display.ttf.eot"),
-    url("/assets/OPTIOliver-Display.ttf.eot?#iefix") format("embedded-opentype");
+  src: url("OPTIOliver-Display.ttf.woff") format("woff"),
+    url("OPTIOliver-Display.ttf.svg#OPTIOliver-Display") format("svg"),
+    url("OPTIOliver-Display.ttf.eot"),
+    url("OPTIOliver-Display.ttf.eot?#iefix") format("embedded-opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -102,7 +102,25 @@ $displayfont: "OPTIOliver-Display";
   border-bottom: 1px solid $primary;
 
   .navbar-brand {
+    font-family: "OPTIOliver-Display";
+    text-transform: uppercase;
     text-decoration: none;
+
+    span {
+      margin-right: 0.1em;
+    }
+
+    span:nth-of-type(1) {
+      color: var(--bs-navbar-brand-hover-color);
+    }
+
+    span:nth-of-type(2) {
+      color: $tertiary;
+    }
+
+    span:nth-of-type(3) {
+      color: $primary;
+    }
   }
 }
 
