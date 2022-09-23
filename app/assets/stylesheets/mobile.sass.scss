@@ -146,15 +146,14 @@ $displayfont: "OPTIOliver-Display";
   }
 
   .rate-description {
-    margin-bottom: 11px;
+    margin-bottom: 0;
   }
 
   .range {
+    margin-bottom: 0.5em;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    position: relative;
-    top: calc(-33px + 0.9375vw);
+    align-items: center;
   }
 
   .less-scenic,
@@ -171,10 +170,16 @@ $displayfont: "OPTIOliver-Display";
     @extend .btn, .btn-primary, .btn-sm;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    margin-top: 7px;
-    font-size: 3.75vw;
-    padding: 1.5625vw 1.5625vw 1.25vw !important;
-    margin: 2.1875vw 0.6015625vw 2.1875vw;
+    font-size: 1.1em;
+    width: 6.25vw;
+    height: 2.5em;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+
+    &:last-of-type {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
 
