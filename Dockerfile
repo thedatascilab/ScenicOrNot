@@ -106,6 +106,8 @@ RUN \
   bundle exec rake assets:precompile; \
   fi
 
+RUN bundle exec rails app:static
+
 # TODO:
 # In order to expose the current git sha & time of build in the /healthcheck
 # endpoint, pass these values into your deployment script, for example:
