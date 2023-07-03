@@ -311,7 +311,7 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.4)
-    smarter_csv (1.7.2)
+    smarter_csv (1.8.5)
     spring (4.1.1)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
@@ -394,7 +394,7 @@ DEPENDENCIES
   selenium-webdriver
   shoulda-matchers
   simplecov
-  smarter_csv (~> 1.7)
+  smarter_csv (~> 1.8)
   spring
   spring-commands-rspec
   spring-watcher-listen (~> 2.1.0)
