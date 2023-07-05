@@ -1,5 +1,6 @@
 {
   "name": "scenic-or-not",
+  "type": "module",
   "private": true,
   "scripts": {
     "lint:format": "prettier --check '**/*'",
