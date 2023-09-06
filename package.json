@@ -22,7 +22,7 @@
     "bootstrap": "^5.3.1",
     "core-js": "3",
     "js-cookie": "^3.0.5",
-    "rollup": "^3.28.0",
+    "rollup": "^3.29.0",
     "sass": "^1.66.1"
   },
   "devDependencies": {
