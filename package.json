@@ -12,7 +12,7 @@
     "build:css:mobile": "sass ./app/assets/stylesheets/mobile.sass.scss ./app/assets/builds/mobile.css --no-source-map --load-path=node_modules"
   },
   "dependencies": {
-    "@babel/core": "^7.22.15",
+    "@babel/core": "^7.22.17",
     "@babel/plugin-transform-runtime": "^7.22.15",
     "@babel/preset-env": "^7.22.15",
     "@babel/runtime": "^7.22.15",
