@@ -88,7 +88,7 @@ GEM
       rouge (>= 1.0.0)
     bigdecimal (3.1.4)
     bindex (0.8.1)
-    bootsnap (1.16.0)
+    bootsnap (1.17.0)
       msgpack (~> 1.2)
     bootstrap (5.3.1)
       autoprefixer-rails (>= 9.1.0)
@@ -199,7 +199,7 @@ GEM
     mini_racer (0.8.0)
       libv8-node (~> 18.16.0.0)
     minitest (5.20.0)
-    msgpack (1.7.1)
+    msgpack (1.7.2)
     mutex_m (0.1.2)
     net-imap (0.4.1)
       date
