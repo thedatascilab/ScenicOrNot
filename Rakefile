@@ -17,7 +17,7 @@ namespace :app do
     pages = {
       "pages/errors/404" => "404.html",
       "pages/errors/422" => "422.html",
-      "pages/errors/500" => "500.html",
+      "pages/errors/500" => "500.html"
       # TODO: Generate this page, inlining all assets (CSS, JS, and images as data URLs)
       # "pages/errors/503" => "503.html"
     }

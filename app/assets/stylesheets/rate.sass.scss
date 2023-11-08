@@ -36,7 +36,8 @@
         &:hover {
           text-shadow: 1px 1px #000;
           cursor: pointer;
-          background: url("hover-top.svg") top center no-repeat,
+          background:
+            url("hover-top.svg") top center no-repeat,
             url("hover-bottom.svg") bottom center no-repeat;
         }
       }

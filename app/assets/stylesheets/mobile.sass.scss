@@ -10,7 +10,8 @@ $displayfont: "OPTIOliver-Display";
 
 @font-face {
   font-family: "OPTIOliver-Display";
-  src: url("OPTIOliver-Display.ttf.woff") format("woff"),
+  src:
+    url("OPTIOliver-Display.ttf.woff") format("woff"),
     url("OPTIOliver-Display.ttf.svg#OPTIOliver-Display") format("svg"),
     url("OPTIOliver-Display.ttf.eot"),
     url("OPTIOliver-Display.ttf.eot?#iefix") format("embedded-opentype");
@@ -38,11 +39,8 @@ $displayfont: "OPTIOliver-Display";
     z-index: -1;
     content: "";
     position: absolute;
-    background: radial-gradient(
-          circle at 0 0,
-          transparent 15px,
-          $secondary calc(15px)
-        )
+    background:
+      radial-gradient(circle at 0 0, transparent 15px, $secondary calc(15px))
         top left,
       radial-gradient(circle at 100% 0, transparent 15px, $secondary calc(15px))
         top right,
@@ -65,12 +63,9 @@ $displayfont: "OPTIOliver-Display";
     z-index: -2;
     content: "";
     position: absolute;
-    background: radial-gradient(
-          circle at 0 0,
-          transparent 15px,
-          $tertiary calc(15px)
-        )
-        top left,
+    background:
+      radial-gradient(circle at 0 0, transparent 15px, $tertiary calc(15px)) top
+        left,
       radial-gradient(circle at 100% 0, transparent 15px, $tertiary calc(15px))
         top right,
       radial-gradient(circle at 0 100%, transparent 15px, $tertiary calc(15px))
@@ -93,7 +88,8 @@ $displayfont: "OPTIOliver-Display";
 .rope {
   display: block;
   height: 32px;
-  background: url("rope-tile.svg") top left 13.75vw repeat-y,
+  background:
+    url("rope-tile.svg") top left 13.75vw repeat-y,
     url("rope-tile.svg") top right 13.75vw repeat-y;
 }
 
