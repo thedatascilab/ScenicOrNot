@@ -39,8 +39,8 @@ ENV BUNDLE_GEM_GROUPS ${RAILS_ENV}
 COPY Gemfile ${DEPS_HOME}/Gemfile
 COPY Gemfile.lock ${DEPS_HOME}/Gemfile.lock
 
-RUN gem update --system 3.3.5
-RUN gem install bundler -v 2.3.5
+RUN gem update --system 3.4.21
+RUN gem install bundler -v 2.4.21
 RUN bundle config set frozen "true"
 RUN bundle config set no-cache "true"
 RUN bundle config set with "${BUNDLE_GEM_GROUPS}"
