@@ -4,7 +4,16 @@
 FROM ruby:3.1.4 as base
 LABEL org.opencontainers.image.authors="contact@dxw.com"
 
-RUN curl -L https://deb.nodesource.com/setup_16.x | bash -
+# Install NodeSource Node.js binary distribution
+RUN apt-get update
+RUN apt-get install -y ca-certificates curl gnupg
+RUN mkdir -p /etc/apt/keyrings
+RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+ENV NODE_MAJOR 16
+RUN apt-get update
+RUN apt-get install -y nodejs
+# End of Node.js install
+
 RUN curl https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN \
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | \
