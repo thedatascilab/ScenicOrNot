@@ -8,7 +8,7 @@ gem "activerecord-import", "~> 1.5"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap", ">= 4.3.1"
 gem "coffee-rails", "~> 5.0"
-gem "cssbundling-rails", "~> 1.3"
+gem "cssbundling-rails", "~> 1.4"
 gem "high_voltage"
 gem "jbuilder", "~> 2.11"
 gem "jquery-rails"
