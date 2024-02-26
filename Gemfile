@@ -30,7 +30,7 @@ gem "sd_notify"
 
 group :development do
   gem "better_errors"
-  gem "listen", ">= 3.0.5", "< 3.9"
+  gem "listen", ">= 3.0.5", "< 3.10"
   gem "rails_layout"
   gem "spring"
   gem "spring-commands-rspec"
