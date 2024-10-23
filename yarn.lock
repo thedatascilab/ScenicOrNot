@@ -949,10 +949,10 @@
   resolved "https://registry.yarnpkg.com/@babel/regjsgen/-/regjsgen-0.8.0.tgz#f0ba69b075e1f05fb2825b7fad991e7adbb18310"
   integrity sha512-x/rqGMdzj+fWZvCOYForTghzbtqPDZ5gPwaoNGHdgDfF2QA/XZbCBp4Moo5scrkAMPhB7z26XM/AaHuIJdgauA==
 
-"@babel/runtime@^7.24.8", "@babel/runtime@^7.8.4":
-  version "7.24.8"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.24.8.tgz#5d958c3827b13cc6d05e038c07fb2e5e3420d82e"
-  integrity sha512-5F7SDGs1T72ZczbRwbGO9lQi0NLjQxzl6i4lJxLxfW9U5UluCSyEJeniWvnhl3/euNiqQVbo8zruhsDfid0esA==
+"@babel/runtime@^7.25.9", "@babel/runtime@^7.8.4":
+  version "7.25.9"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.25.9.tgz#65884fd6dc255a775402cc1d9811082918f4bf00"
+  integrity sha512-4zpTHZ9Cm6L9L+uIqghQX8ZXg8HKFcjYO3qHoO8zTmRm6HQUJ8SSJ+KRvbMBZn0EGVlT4DRYeQ/6hjlyXBh+Kg==
   dependencies:
     regenerator-runtime "^0.14.0"
 
