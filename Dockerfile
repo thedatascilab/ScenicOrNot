@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------
 # Base
 # ------------------------------------------------------------------------------
-FROM ruby:3.1.4 as base
+FROM ruby:3.2.8 as base
 LABEL org.opencontainers.image.authors="contact@dxw.com"
 
 # Install NodeSource Node.js binary distribution

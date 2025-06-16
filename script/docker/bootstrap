@@ -23,5 +23,5 @@ for file_and_image in docker-compose.yml:web docker-compose.test.yml:test; do
 
   echo "==> Building $file_and_image Docker image..."
   # shellcheck disable=SC2086
-  docker-compose -f $file build $DOCKER_BUILD_ARGS $image
+  docker compose -f $file build $DOCKER_BUILD_ARGS $image
 done
