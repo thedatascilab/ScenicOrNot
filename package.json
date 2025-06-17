@@ -19,7 +19,7 @@
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^28.0.5",
     "@rollup/plugin-node-resolve": "^16.0.1",
-    "bootstrap": "^5.3.3",
+    "bootstrap": "^5.3.6",
     "core-js": "3",
     "js-cookie": "^3.0.5",
     "rollup": "^4.43.0",
