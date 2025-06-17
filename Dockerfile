@@ -152,8 +152,7 @@ RUN \
   shellcheck \
   yarn
 
-COPY .eslintignore ${APP_HOME}/.eslintignore
-COPY .eslintrc.json ${APP_HOME}/.eslintrc.json
+COPY eslint.config.mjs ${APP_HOME}/eslint.config.mjs
 COPY .prettierignore ${APP_HOME}/.prettierignore
 COPY .prettierrc ${APP_HOME}/.prettierrc
 
