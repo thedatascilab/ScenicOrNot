@@ -23,7 +23,7 @@
     "core-js": "3",
     "js-cookie": "^3.0.5",
     "rollup": "^4.52.3",
-    "sass": "^1.91.0"
+    "sass": "^1.93.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
